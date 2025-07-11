@@ -9,7 +9,7 @@ const faqData = [
   {
     question: "Kurs davomiyligi qancha?",
     answer:
-      "Bizning kurslarimiz odatda 1.5-2 oy davom etadi. Bu vaqt ichida siz Islom moliyasi asoslarini to'liq o'rganasiz va amaliy ko'nikmalarni egallaysiz.",
+      "Bizning kuslarimiz odatda 1.5-2 oy davom etadi. Bu vaqt ichida siz Islom moliyasi asoslarini to'liq o'rganasiz va amaliy ko'nikmalarni egallaysiz.",
   },
   {
     question: "Oldindan tajriba kerakmi?",

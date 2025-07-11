@@ -60,7 +60,7 @@ export default function SearchSection() {
   return (
     <div className="bg-black relative z-30">
       {/* Teachers Section */}
-      <section id="teachers" className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl my-8 py-4">
+      <section id="teachers" className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl my-0 py-2 mt-6 sm:mt-0">
         <ScrollAnimation animationType="flipIn">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Bizning Mutaxassis Ustozlarimiz</h2>
@@ -78,7 +78,6 @@ export default function SearchSection() {
               animationType="zoomIn"
               delay={index * 200}
               className="stagger-item"
-              style={{ "--stagger-delay": index } as React.CSSProperties}
             >
               <Card className="bg-black border-white/20 hover:border-green-400/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl group rounded-lg">
                 <CardHeader className="text-center pb-4">

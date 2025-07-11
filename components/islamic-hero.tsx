@@ -26,22 +26,22 @@ export default function IslamicHero() {
       <div className="absolute inset-0 bg-slate-950" />
 
       <div className="container mx-auto px-4 sm:px-6 max-w-7xl relative z-10 bg-gray-950 lg:px-1.5">
-        <div className="grid lg:grid-cols-2 gap-12 items-center pt-12 lg:pt-16 my-0">
+        <div className="grid lg:grid-cols-2 gap-12 items-center pt-2 lg:pt-16 my-0">
           {/* Mobile: Image First, Desktop: Text First */}
-          <div className="lg:hidden order-1 mb-8">
+          <div className="lg:hidden order-1 mb-1 pt-3">
             <ScrollAnimation animationType="zoomIn" delay={200}>
               <div className="relative flex items-center justify-center">
                 <div className="relative group">
-                  <div className="w-80 h-80 rounded-lg overflow-hidden shadow-2xl border border-white/20">
+                  <div className="w-80 h-80 rounded-full overflow-hidden shadow-2xl border border-white/20">
                     <img
                       src="https://i.postimg.cc/BvPnZWxg/Post-to-FB-Muzaffar.png"
                       alt="Islamic Finance Instructor"
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-black/95 backdrop-blur-sm border border-white/20 rounded-lg px-4 py-3 shadow-xl">
+                  <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-black/95 backdrop-blur-sm border border-white/20 rounded-full px-4 py-3 shadow-xl">
                     <div className="text-center">
-                      <div className="text-white text-base font-semibold">Ustoz Muzaffar</div>
+                      <div className="text-white text-base font-semibold whitespace-nowrap">Muzaffar Husniddinov</div>
                       <div className="text-green-400 text-sm">Moliya Mutaxassisi</div>
                     </div>
                   </div>
@@ -93,10 +93,10 @@ export default function IslamicHero() {
             </ScrollAnimation>
 
             <ScrollAnimation animationType="slideUp" delay={700}>
-              <div className="flex flex-col sm:flex-row gap-4 border-0 px-0 text-justify items-center justify-center mb-8 sm:mb-0">
+              <div className="flex flex-row gap-4 border-0 px-0 text-justify items-center justify-center mb-8 sm:mb-0">
                 <Button
                   size="lg"
-                  className="bg-green-600 hover:bg-green-700 text-white font-semibold py-4 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-white/20 hover:border-green-400 hover:shadow-green-400/25 rounded-xl px-6"
+                  className="bg-green-600 hover:bg-green-700 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-white/20 hover:border-green-400 hover:shadow-green-400/25 rounded-xl btn-responsive"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -119,7 +119,7 @@ export default function IslamicHero() {
                 <Button
                   size="lg"
                   onClick={() => smoothScrollTo("teachers")}
-                  className="bg-transparent hover:bg-green-600/20 border-2 hover:border-green-400 px-8 py-4 transition-all duration-300 font-semibold hover:shadow-lg hover:shadow-green-400/25 hover:scale-105 rounded-xl text-white border-white"
+                  className="bg-transparent hover:bg-green-600/20 border-2 hover:border-green-400 transition-all duration-300 font-semibold hover:shadow-lg hover:shadow-green-400/25 hover:scale-105 rounded-xl text-white border-white btn-responsive"
                 >
                   Batafsil Ma'lumot
                 </Button>
@@ -131,16 +131,16 @@ export default function IslamicHero() {
           <div className="hidden lg:flex order-1 lg:order-2 justify-center">
             <ScrollAnimation animationType="rotateIn" delay={400}>
               <div className="relative group">
-                <div className="w-96 h-96 rounded-lg overflow-hidden shadow-2xl transition-transform duration-500 group-hover:scale-105 border border-white/20">
+                <div className="w-96 h-96 rounded-full overflow-hidden shadow-2xl transition-transform duration-500 group-hover:scale-105 border border-white/20">
                   <img
                     src="https://i.postimg.cc/BvPnZWxg/Post-to-FB-Muzaffar.png"
                     alt="Islamic Finance Instructor"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                 </div>
-                <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-black/95 backdrop-blur-sm border border-white/20 rounded-lg px-6 py-4 shadow-xl transition-all duration-300 group-hover:shadow-2xl group-hover:-translate-y-1">
+                <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-black/95 backdrop-blur-sm border border-white/20 rounded-full px-6 py-4 shadow-xl transition-all duration-300 group-hover:shadow-2xl group-hover:-translate-y-1">
                   <div className="text-center">
-                    <div className="text-white text-lg font-semibold">Ustoz Muzaffar</div>
+                    <div className="text-white text-lg font-semibold whitespace-nowrap">Muzaffar Husniddinov</div>
                     <div className="text-green-400 text-sm font-medium">Moliya Sohasida Mutaxassis</div>
                     <div className="text-white/70 text-xs mt-1">10+ yillik tajriba</div>
                   </div>

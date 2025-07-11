@@ -27,7 +27,7 @@ export default function ScrollAnimation({
   className = "",
   animationType = "up",
   delay = 0,
-  duration = 600,
+  duration = 300,
 }: ScrollAnimationProps) {
   const elementRef = useRef<HTMLDivElement>(null)
   const [isClient, setIsClient] = useState(false)
