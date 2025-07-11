@@ -1,0 +1,240 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #000000;
+    --foreground: #ffffff;
+    --card: #000000;
+    --card-foreground: #ffffff;
+    --popover: #000000;
+    --popover-foreground: #ffffff;
+    --primary: #16a34a;
+    --primary-foreground: #ffffff;
+    --secondary: #22c55e;
+    --secondary-foreground: #000000;
+    --muted: #1a1a1a;
+    --muted-foreground: #ffffff;
+    --accent: #22c55e;
+    --accent-foreground: #000000;
+    --destructive: #ef4444;
+    --destructive-foreground: #ffffff;
+    --border: #ffffff;
+    --input: #1a1a1a;
+    --ring: #16a34a;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    background-color: #000000;
+    color: #ffffff;
+  }
+}
+
+@layer utilities {
+  .animate-spin-slow {
+    animation: spin 20s linear infinite;
+  }
+}
+
+/* Slower smooth scrolling */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+/* Base Animation Classes with 0.6s smooth transitions */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease-in-out;
+  will-change: opacity, transform;
+}
+
+.animate-on-scroll.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animate-on-scroll-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.6s ease-in-out;
+  will-change: opacity, transform;
+}
+
+.animate-on-scroll-left.animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.animate-on-scroll-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.6s ease-in-out;
+  will-change: opacity, transform;
+}
+
+.animate-on-scroll-right.animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.animate-on-scroll-scale {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.6s ease-in-out;
+  will-change: opacity, transform;
+}
+
+.animate-on-scroll-scale.animate {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.animate-on-scroll-fade {
+  opacity: 0;
+  transition: all 0.6s ease-in-out;
+  will-change: opacity;
+}
+
+.animate-on-scroll-fade.animate {
+  opacity: 1;
+}
+
+.animate-on-scroll-slide-up {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.6s ease-in-out;
+  will-change: opacity, transform;
+}
+
+.animate-on-scroll-slide-up.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animate-on-scroll-slide-down {
+  opacity: 0;
+  transform: translateY(-60px);
+  transition: all 0.6s ease-in-out;
+  will-change: opacity, transform;
+}
+
+.animate-on-scroll-slide-down.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animate-on-scroll-rotate {
+  opacity: 0;
+  transform: rotate(-10deg) scale(0.9);
+  transition: all 0.6s ease-in-out;
+  will-change: opacity, transform;
+}
+
+.animate-on-scroll-rotate.animate {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+.animate-on-scroll-bounce {
+  opacity: 0;
+  transform: translateY(40px) scale(0.9);
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  will-change: opacity, transform;
+}
+
+.animate-on-scroll-bounce.animate {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.animate-on-scroll-zoom {
+  opacity: 0;
+  transform: scale(0.5);
+  transition: all 0.6s ease-in-out;
+  will-change: opacity, transform;
+}
+
+.animate-on-scroll-zoom.animate {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.animate-on-scroll-flip {
+  opacity: 0;
+  transform: perspective(400px) rotateY(90deg);
+  transition: all 0.6s ease-in-out;
+  will-change: opacity, transform;
+}
+
+.animate-on-scroll-flip.animate {
+  opacity: 1;
+  transform: perspective(400px) rotateY(0deg);
+}
+
+/* Staggered animations for child elements */
+.stagger-children > * {
+  transition-delay: calc(var(--stagger-delay, 0) * 100ms);
+}
+
+/* Fallback for reduced motion or SSR */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-on-scroll,
+  .animate-on-scroll-left,
+  .animate-on-scroll-right,
+  .animate-on-scroll-scale,
+  .animate-on-scroll-fade,
+  .animate-on-scroll-slide-up,
+  .animate-on-scroll-slide-down,
+  .animate-on-scroll-rotate,
+  .animate-on-scroll-bounce,
+  .animate-on-scroll-zoom,
+  .animate-on-scroll-flip {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+/* Ensure content is visible during SSR only when client-side is ready */
+.animate-on-scroll:not(.animate),
+.animate-on-scroll-left:not(.animate),
+.animate-on-scroll-right:not(.animate),
+.animate-on-scroll-scale:not(.animate),
+.animate-on-scroll-fade:not(.animate),
+.animate-on-scroll-slide-up:not(.animate),
+.animate-on-scroll-slide-down:not(.animate),
+.animate-on-scroll-rotate:not(.animate),
+.animate-on-scroll-bounce:not(.animate),
+.animate-on-scroll-zoom:not(.animate),
+.animate-on-scroll-flip:not(.animate) {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+/* Show elements when client-side is ready and not animated */
+.client-ready .animate-on-scroll:not(.animate),
+.client-ready .animate-on-scroll-left:not(.animate),
+.client-ready .animate-on-scroll-right:not(.animate),
+.client-ready .animate-on-scroll-scale:not(.animate),
+.client-ready .animate-on-scroll-fade:not(.animate),
+.client-ready .animate-on-scroll-slide-up:not(.animate),
+.client-ready .animate-on-scroll-slide-down:not(.animate),
+.client-ready .animate-on-scroll-rotate:not(.animate),
+.client-ready .animate-on-scroll-bounce:not(.animate),
+.client-ready .animate-on-scroll-zoom:not(.animate),
+.client-ready .animate-on-scroll-flip:not(.animate) {
+  opacity: 0;
+  transform: translateY(40px);
+}
