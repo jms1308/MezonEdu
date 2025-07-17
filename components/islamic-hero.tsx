@@ -21,7 +21,7 @@ const smoothScrollTo = (elementId: string) => {
 
 export default function IslamicHero() {
   return (
-    <section id="hero" className="relative min-h-screen bg-black overflow-hidden">
+    <section id="hero" className="relative min-h-screen overflow-hidden" style={{ background: 'linear-gradient(135deg, #43cea2 0%, #185a9d 60%, #232526 100%)' }}>
       {/* Gradient Overlays */}
       <div className="absolute inset-0 bg-slate-950" />
 
@@ -51,10 +51,9 @@ export default function IslamicHero() {
           </div>
 
           {/* Left Content */}
-          <div className="space-y-8 order-2 lg:order-1 text-left">
+          <div className="space-y-8 order-2 lg:order-1 text-left lg:pl-16">
             <ScrollAnimation animationType="slideDown" delay={100}>
               <div className="space-y-2 text-white mt-0 pt-0">
-                <p className="text-sm font-medium tracking-wider uppercase text-white mt-0 pt-0">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم</p>
                 <div className="h-px w-16 bg-gradient-to-r from-green-400 to-transparent" />
               </div>
             </ScrollAnimation>

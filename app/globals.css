@@ -33,6 +33,7 @@
   body {
     background-color: #000000;
     color: #ffffff;
+    font-size: 1rem;
   }
 }
 
@@ -46,6 +47,19 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
+  font-size: 16px;
+}
+@media (min-width: 1024px) {
+  html {
+    font-size: 20px;
+  }
+}
+body {
+  font-size: 1rem;
+}
+
+html, body {
+  height: 100%;
 }
 
 /* Base Animation Classes with 0.6s smooth transitions */
