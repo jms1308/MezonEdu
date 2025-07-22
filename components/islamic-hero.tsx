@@ -2,6 +2,9 @@
 
 import { Button } from "@/components/ui/button"
 import ScrollAnimation from "./scroll-animation"
+import { Dialog, DialogTrigger, DialogContent, DialogHeader, DialogFooter, DialogTitle, DialogDescription, DialogClose } from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { useState } from "react";
 
 const smoothScrollTo = (elementId: string) => {
   if (typeof window === "undefined") return
@@ -93,28 +96,47 @@ export default function IslamicHero() {
 
             <ScrollAnimation animationType="slideUp" delay={700}>
               <div className="flex flex-row gap-4 border-0 px-0 text-justify items-center justify-center mb-8 sm:mb-0">
-                <Button
-                  size="lg"
-                  className="bg-green-600 hover:bg-green-700 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-white/20 hover:border-green-400 hover:shadow-green-400/25 rounded-xl btn-responsive"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="lucide lucide-book-open mr-2 h-5 w-5"
-                  >
-                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
-                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
-                  </svg>
-                  Ro'yxatdan o'tish
-                </Button>
-
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <Button
+                      size="lg"
+                      className="bg-green-600 hover:bg-green-700 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-white/20 hover:border-green-400 hover:shadow-green-400/25 rounded-xl btn-responsive"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="lucide lucide-book-open mr-2 h-5 w-5"
+                      >
+                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                      </svg>
+                      Ro'yxatdan o'tish
+                    </Button>
+                  </DialogTrigger>
+                  <DialogContent>
+                    <DialogHeader>
+                      <DialogTitle>Ro'yxatdan o'tish</DialogTitle>
+                      <DialogDescription>Iltimos, ismingiz va telefon raqamingizni kiriting.</DialogDescription>
+                    </DialogHeader>
+                    <form className="space-y-4">
+                      <Input placeholder="Ismingiz" type="text" required />
+                      <Input placeholder="Telefon raqamingiz" type="tel" required />
+                      <DialogFooter>
+                        <DialogClose asChild>
+                          <Button type="button" variant="outline">Bekor qilish</Button>
+                        </DialogClose>
+                        <Button type="submit" className="bg-green-600 hover:bg-green-700 text-white">Yuborish</Button>
+                      </DialogFooter>
+                    </form>
+                  </DialogContent>
+                </Dialog>
                 <Button
                   size="lg"
                   onClick={() => smoothScrollTo("teachers")}
