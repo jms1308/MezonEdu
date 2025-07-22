@@ -35,10 +35,7 @@ export default function Hero() {
                 <Input placeholder="Ismingiz" type="text" required />
                 <Input placeholder="Telefon raqamingiz" type="tel" required />
                 <DialogFooter>
-                  <DialogClose asChild>
-                    <Button type="button" variant="outline">Bekor qilish</Button>
-                  </DialogClose>
-                  <Button type="submit" className="bg-rose-600 hover:bg-rose-700 text-white">Yuborish</Button>
+                  <Button type="submit" className="bg-rose-600 hover:bg-rose-700 text-white w-full sm:w-auto">Yuborish</Button>
                 </DialogFooter>
               </form>
             </DialogContent>
