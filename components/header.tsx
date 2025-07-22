@@ -70,7 +70,7 @@ export default function Header() {
                 <Input placeholder="Ismingiz" type="text" required />
                 <Input placeholder="Telefon raqamingiz" type="tel" required />
                 <DialogFooter>
-                  <Button type="submit" className="bg-green-600 hover:bg-green-700 text-white w-full sm:w-auto">Yuborish</Button>
+                  <Button type="submit" className="bg-green-600 hover:bg-green-700 text-white w-full sm:w-auto rounded-xl">Yuborish</Button>
                 </DialogFooter>
               </form>
             </DialogContent>
