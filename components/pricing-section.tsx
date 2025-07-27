@@ -86,7 +86,7 @@ export default function PricingSection() {
               delay={index * 200}
             >
               <Card
-                className={`relative overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl rounded-lg ${
+                className={`relative overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl rounded-lg h-full flex flex-col ${
                   plan.popular
                     ? "border-2 border-green-400 bg-black shadow-xl"
                     : "border border-white/20 bg-black hover:border-green-400/50"
@@ -98,7 +98,7 @@ export default function PricingSection() {
                   </div>
                 )}
 
-                <CardHeader className="text-center pb-8">
+                <CardHeader className="text-center pb-8 flex-shrink-0">
                   <div
                     className={`mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full ${
                       plan.popular ? "bg-green-400/20 text-green-400" : "bg-white/20 text-white"
@@ -114,7 +114,7 @@ export default function PricingSection() {
                   <CardDescription className="mt-4 text-white/70">{plan.description}</CardDescription>
                 </CardHeader>
 
-                <CardContent className="space-y-4">
+                <CardContent className="space-y-4 flex-1">
                   <ul className="space-y-3">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-start gap-3">
@@ -127,7 +127,7 @@ export default function PricingSection() {
                   </ul>
                 </CardContent>
 
-                <CardFooter className="pt-6">
+                <CardFooter className="pt-6 flex-shrink-0">
                   <Button
                     className={`w-full py-3 font-semibold transition-all duration-300 rounded-lg border border-white/20 hover:border-green-400 hover:shadow-green-400/25 ${plan.bgColor} ${plan.hoverColor} ${plan.textColor} hover:shadow-lg`}
                   >

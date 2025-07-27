@@ -13,145 +13,112 @@ const teachers = [
     experience: "20 yillik tajriba",
     image: "https://i.postimg.cc/DfgSnGVZ/Post-to-FB-Muzaffar-1.png",
     description: "Islom moliyasida ekspert",
+    specialization: "Islomiy Bankchilik",
+    achievements: "500+ talaba tayyorlagan",
+    rating: 4.9,
   },
   {
     name: "Kamola Rahimova",
     experience: "8 yil Moliya Sohasida",
     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop&crop=face",
     description: "Islom moliyasi bo'yicha ekspert",
+    specialization: "Moliyaviy Rejalashtirish",
+    achievements: "300+ amaliy loyiha",
+    rating: 4.8,
   },
   {
     name: "Muzaffar Husniddinov",
     experience: "12 yil Biznes Sohasida",
     image: "https://i.postimg.cc/BvPnZWxg/Post-to-FB-Muzaffar.png",
     description: "Islom moliyasida ekspert",
+    specialization: "Halol Investitsiya",
+    achievements: "200+ biznes loyiha",
+    rating: 4.9,
   },
 ]
 
-const learningOutcomes = [
-  {
-    number: "1",
-    title: "Islom moliyasi asoslarini o'rganing",
-    icon: <BookOpen className="w-5 h-5 text-white" />,
-  },
-  {
-    number: "2",
-    title: "Halol investitsiya usullarini bilib oling",
-    icon: <Target className="w-5 h-5 text-white" />,
-  },
-  {
-    number: "3",
-    title: "Shaxsiy moliyaviy rejalashtirish",
-    icon: <Award className="w-5 h-5 text-white" />,
-  },
-  {
-    number: "4",
-    title: "Islom bankchiligi tamoyillari",
-    icon: <Code className="w-5 h-5 text-white" />,
-  },
-  {
-    number: "5",
-    title: "Amaliy loyihalar va case study",
-    icon: <Laptop className="w-5 h-5 text-white" />,
-  },
-]
+
 
 export default function SearchSection() {
   return (
     <div className="bg-black relative z-30">
       {/* Teachers Section */}
-      <section id="teachers" className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl my-0 py-2 mt-6 sm:mt-0">
-        <ScrollAnimation animationType="flipIn">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Bizning Mutaxassis Ustozlarimiz</h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-green-400 to-green-600 mx-auto mb-6"></div>
-            <p className="text-white/70 text-lg max-w-2xl mx-auto">
-              Tajribali mutaxassislardan o'rganing va o'z maqsadlaringizga erishing
-            </p>
-          </div>
-        </ScrollAnimation>
-
-        <div className="grid md:grid-cols-3 gap-8 mb-12 stagger-children">
-          {teachers.map((teacher, index) => (
-            <ScrollAnimation
-              key={index}
-              animationType="zoomIn"
-              delay={index * 200}
-              className="stagger-item"
-            >
-              <Card className="bg-black border-white/20 hover:border-green-400/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl group rounded-lg">
-                <CardHeader className="text-center pb-4">
-                  <div className="relative mx-auto mb-4">
-                    <div className="w-32 h-32 rounded-lg overflow-hidden border border-white/20 group-hover:border-green-400/60 transition-all duration-300">
-                      <img
-                        src={teacher.image || "/placeholder.svg"}
-                        alt={teacher.name}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-green-400/10 to-green-600/10 blur-xl opacity-0 group-hover:opacity-50 transition-opacity duration-300" />
-                  </div>
-                  <CardTitle className="text-white text-xl">{teacher.name}</CardTitle>
-                  <CardDescription className="font-medium text-green-300">{teacher.experience}</CardDescription>
-                </CardHeader>
-                <CardContent className="text-center">
-                  <p className="text-white/70 text-sm">{teacher.description}</p>
-                </CardContent>
-              </Card>
-            </ScrollAnimation>
-          ))}
-        </div>
-      </section>
-
-      {/* What You'll Learn Section */}
-      <section id="learning" className="bg-black py-8">
+      <section id="teachers" className="py-[70px] bg-black relative">
+        {/* Subtle divider line above */}
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+        
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+          {/* Section Header */}
           <ScrollAnimation animationType="slideDown">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">1.5 Oyda Nimalar O'rganasiz</h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-green-400 to-green-600 mx-auto mb-6"></div>
-              <p className="text-white/70 text-lg max-w-2xl mx-auto">
-                Qisqa muddat ichida katta natijalar - bizning intensiv dasturimiz orqali
+            <div className="text-center mb-20">
+              <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6 font-poppins">
+                Bizning Mutaxassis Ustozlarimiz
+              </h2>
+              <p className="text-white/70 text-lg max-w-3xl mx-auto leading-relaxed">
+                Siz bilan ishlaydigan malakali mutaxassislar
               </p>
             </div>
           </ScrollAnimation>
 
-          <div className="max-w-4xl mx-auto">
-            <div className="space-y-6">
-              {learningOutcomes.map((outcome, index) => (
-                <ScrollAnimation key={index} animationType={index % 2 === 0 ? "left" : "right"} delay={index * 150}>
-                  <div className="flex items-center gap-6 p-6 bg-black border border-white/20 rounded-lg hover:border-green-400/30 transition-all duration-300 hover:bg-black group">
-                    <div className="flex-shrink-0">
-                      <div className="w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-lg group-hover:bg-green-700 transition-colors duration-300 bg-green-400">
-                        {outcome.number}
+          {/* Teachers Grid */}
+          <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {teachers.map((teacher, index) => (
+              <ScrollAnimation
+                key={index}
+                animationType="slideUp"
+                delay={index * 200}
+              >
+                <div className="group h-full">
+                  {/* Teacher Card */}
+                  <div className="bg-black border border-white/10 rounded-[20px] p-8 text-center shadow-lg hover:shadow-xl hover:shadow-[#1DB954]/10 transition-all duration-500 hover:scale-[1.02] hover:border-[#1DB954]/30 h-full flex flex-col">
+                    {/* Profile Image */}
+                    <div className="relative mb-6 flex-shrink-0">
+                      <div className="relative mx-auto w-40 h-40">
+                        <div className="absolute inset-0 bg-gradient-to-br from-[#1DB954] to-[#1DB954]/80 rounded-full blur-xl opacity-20 group-hover:opacity-40 transition-opacity duration-500" />
+                        <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white/20 group-hover:border-[#1DB954]/40 transition-all duration-500">
+                          <img
+                            src={teacher.image || "/placeholder.svg"}
+                            alt={teacher.name}
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                          />
+                        </div>
                       </div>
                     </div>
-                    <div className="flex-grow">
-                      <h3 className="text-white text-lg font-semibold">{outcome.title}</h3>
-                    </div>
-                    <div className="flex-shrink-0">
-                      <div className="w-10 h-10 rounded-full bg-green-400/20 flex items-center justify-center text-green-400 group-hover:bg-green-400/30 transition-colors duration-300">
-                        {outcome.icon}
-                      </div>
+
+                    {/* Teacher Info */}
+                    <div className="space-y-4 flex-1 flex flex-col justify-center">
+                      {/* Name */}
+                      <h3 className="text-2xl font-bold text-white font-poppins group-hover:text-[#1DB954] transition-colors duration-300">
+                        {teacher.name}
+                      </h3>
+
+                      {/* Specialty */}
+                      <p className="text-[#1DB954] font-semibold text-lg">
+                        {teacher.specialization}
+                      </p>
+
+                      {/* Experience */}
+                      <p className="text-white/60 text-base">
+                        {teacher.experience}
+                      </p>
+
+                      {/* Description */}
+                      <p className="text-white/70 text-sm leading-relaxed">
+                        {teacher.description}
+                      </p>
                     </div>
                   </div>
-                </ScrollAnimation>
-              ))}
-            </div>
+                </div>
+              </ScrollAnimation>
+            ))}
           </div>
-
-          <ScrollAnimation animationType="bounceIn" delay={800}>
-            <div className="text-center mt-12">
-              <Button
-                size="lg"
-                className="bg-green-600 hover:bg-green-700 text-white font-semibold px-8 py-4 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-white/20 hover:border-green-400 hover:shadow-green-400/25 rounded-xl"
-              >
-                Hoziroq O'rganishni Boshlang
-              </Button>
-            </div>
-          </ScrollAnimation>
         </div>
+
+        {/* Subtle divider line below */}
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
       </section>
+
+
     </div>
   )
 }

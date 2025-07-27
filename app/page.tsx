@@ -1,6 +1,8 @@
 import Header from "@/components/header"
 import IslamicHero from "@/components/islamic-hero"
 import SearchSection from "@/components/search-section"
+import LearnSection from "@/components/learn-section"
+import CourseGallery from "@/components/course-gallery"
 import PricingSection from "@/components/pricing-section"
 import FAQSection from "@/components/faq-section"
 import ContactForm from "@/components/contact-form"
@@ -17,6 +19,8 @@ export default function Home() {
           <TeacherCarousel />
         </div> */}
         <SearchSection />
+        <LearnSection />
+        <CourseGallery />
         <PricingSection />
         <FAQSection />
         <ContactForm />

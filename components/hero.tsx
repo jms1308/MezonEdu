@@ -1,7 +1,6 @@
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Dialog, DialogTrigger, DialogContent, DialogHeader, DialogFooter, DialogTitle, DialogDescription, DialogClose } from "@/components/ui/dialog";
-import { Input } from "@/components/ui/input";
+import SignupModal from "./signup-modal"
 
 export default function Hero() {
   return (
@@ -20,26 +19,11 @@ export default function Hero() {
         <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">Islom Moliyasi endi qiyin emas  </h1>
         <p className="mt-6 max-w-2xl text-lg">Hoziroq ro'yxatdan o'ting</p>
         <div className="mt-10 flex flex-wrap justify-center gap-4">
-          <Dialog>
-            <DialogTrigger asChild>
-              <Button size="lg" className="bg-rose-600 hover:bg-rose-700">
-                Ro'yxatdan o'tish
-              </Button>
-            </DialogTrigger>
-            <DialogContent>
-              <DialogHeader>
-                <DialogTitle>Ro'yxatdan o'tish</DialogTitle>
-                <DialogDescription>Iltimos, ismingiz va telefon raqamingizni kiriting.</DialogDescription>
-              </DialogHeader>
-              <form className="space-y-4">
-                <Input placeholder="Ismingiz" type="text" required />
-                <Input placeholder="Telefon raqamingiz" type="tel" required />
-                <DialogFooter>
-                  <Button type="submit" className="bg-rose-600 hover:bg-rose-700 text-white w-full sm:w-auto rounded-xl">Yuborish</Button>
-                </DialogFooter>
-              </form>
-            </DialogContent>
-          </Dialog>
+          <SignupModal>
+            <Button size="lg" className="bg-rose-600 hover:bg-rose-700">
+              Ro'yxatdan o'tish
+            </Button>
+          </SignupModal>
           <Button size="lg" variant="outline" className="border-white text-white bg-white/10 hover:bg-white/30">
             了解更多
           </Button>

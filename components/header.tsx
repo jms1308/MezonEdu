@@ -1,8 +1,7 @@
 "use client"
 import { Button } from "@/components/ui/button"
 import { GraduationCapIcon } from "lucide-react"
-import { Dialog, DialogTrigger, DialogContent, DialogHeader, DialogFooter, DialogTitle, DialogDescription, DialogClose } from "@/components/ui/dialog";
-import { Input } from "@/components/ui/input";
+import SignupModal from "./signup-modal"
 
 const smoothScrollTo = (elementId: string) => {
   if (typeof window === "undefined") return
@@ -55,26 +54,11 @@ export default function Header() {
           </button>
         </nav>
         <div className="flex items-center gap-4">
-          <Dialog>
-            <DialogTrigger asChild>
-              <Button className="bg-green-600 hover:bg-green-700 border border-white/20 hover:border-green-400 transition-all duration-300 hover:shadow-lg hover:shadow-green-400/25 rounded-xl text-white">
-                Ro'yxatdan o'tish
-              </Button>
-            </DialogTrigger>
-            <DialogContent>
-              <DialogHeader>
-                <DialogTitle>Ro'yxatdan o'tish</DialogTitle>
-                <DialogDescription>Iltimos, ismingiz va telefon raqamingizni kiriting.</DialogDescription>
-              </DialogHeader>
-              <form className="space-y-4">
-                <Input placeholder="Ismingiz" type="text" required />
-                <Input placeholder="Telefon raqamingiz" type="tel" required />
-                <DialogFooter>
-                  <Button type="submit" className="bg-green-600 hover:bg-green-700 text-white w-full sm:w-auto rounded-xl">Yuborish</Button>
-                </DialogFooter>
-              </form>
-            </DialogContent>
-          </Dialog>
+          <SignupModal>
+            <Button className="bg-green-600 hover:bg-green-700 border border-white/20 hover:border-green-400 transition-all duration-300 hover:shadow-lg hover:shadow-green-400/25 rounded-xl text-white">
+              Ro'yxatdan o'tish
+            </Button>
+          </SignupModal>
         </div>
       </div>
     </header>
