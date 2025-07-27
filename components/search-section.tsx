@@ -18,15 +18,6 @@ const teachers = [
     rating: 4.9,
   },
   {
-    name: "Kamola Rahimova",
-    experience: "8 yil Moliya Sohasida",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop&crop=face",
-    description: "Islom moliyasi bo'yicha ekspert",
-    specialization: "Moliyaviy Rejalashtirish",
-    achievements: "300+ amaliy loyiha",
-    rating: 4.8,
-  },
-  {
     name: "Muzaffar Husniddinov",
     experience: "12 yil Biznes Sohasida",
     image: "https://i.postimg.cc/BvPnZWxg/Post-to-FB-Muzaffar.png",
@@ -61,56 +52,58 @@ export default function SearchSection() {
           </ScrollAnimation>
 
           {/* Teachers Grid */}
-          <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {teachers.map((teacher, index) => (
-              <ScrollAnimation
-                key={index}
-                animationType="slideUp"
-                delay={index * 200}
-              >
-                <div className="group h-full">
-                  {/* Teacher Card */}
-                  <div className="bg-card border border-border rounded-[20px] p-8 text-center shadow-lg hover:shadow-xl hover:shadow-primary/10 transition-all duration-500 hover:scale-[1.02] hover:border-primary/30 h-full flex flex-col">
-                    {/* Profile Image */}
-                    <div className="relative mb-6 flex-shrink-0">
-                      <div className="relative mx-auto w-40 h-40">
-                        <div className="absolute inset-0 bg-gradient-to-br from-primary to-primary/80 rounded-full blur-xl opacity-20 group-hover:opacity-40 transition-opacity duration-500" />
-                        <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-border group-hover:border-primary/40 transition-all duration-500">
-                          <img
-                            src={teacher.image || "/placeholder.svg"}
-                            alt={teacher.name}
-                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                          />
+          <div className="hidden lg:flex justify-center">
+            <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8 max-w-6xl">
+              {teachers.map((teacher, index) => (
+                <ScrollAnimation
+                  key={index}
+                  animationType="slideUp"
+                  delay={index * 200}
+                >
+                  <div className="group h-full">
+                    {/* Teacher Card */}
+                    <div className="bg-card border border-border rounded-[20px] p-8 text-center shadow-lg hover:shadow-xl hover:shadow-primary/10 transition-all duration-500 hover:scale-[1.02] hover:border-primary/30 h-full flex flex-col">
+                      {/* Profile Image */}
+                      <div className="relative mb-6 flex-shrink-0">
+                        <div className="relative mx-auto w-40 h-40">
+                          <div className="absolute inset-0 bg-gradient-to-br from-primary to-primary/80 rounded-full blur-xl opacity-20 group-hover:opacity-40 transition-opacity duration-500" />
+                          <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-border group-hover:border-primary/40 transition-all duration-500">
+                            <img
+                              src={teacher.image || "/placeholder.svg"}
+                              alt={teacher.name}
+                              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            />
+                          </div>
                         </div>
                       </div>
-                    </div>
 
-                    {/* Teacher Info */}
-                    <div className="space-y-4 flex-1 flex flex-col justify-center">
-                      {/* Name */}
-                      <h3 className="text-2xl font-bold text-card-foreground font-poppins group-hover:text-primary transition-colors duration-300">
-                        {teacher.name}
-                      </h3>
+                      {/* Teacher Info */}
+                      <div className="space-y-4 flex-1 flex flex-col justify-center">
+                        {/* Name */}
+                        <h3 className="text-2xl font-bold text-card-foreground font-poppins group-hover:text-primary transition-colors duration-300">
+                          {teacher.name}
+                        </h3>
 
-                      {/* Specialty */}
-                      <p className="text-primary font-semibold text-lg">
-                        {teacher.specialization}
-                      </p>
+                        {/* Specialty */}
+                        <p className="text-primary font-semibold text-lg">
+                          {teacher.specialization}
+                        </p>
 
-                      {/* Experience */}
-                      <p className="text-muted-foreground text-base">
-                        {teacher.experience}
-                      </p>
+                        {/* Experience */}
+                        <p className="text-muted-foreground text-base">
+                          {teacher.experience}
+                        </p>
 
-                      {/* Description */}
-                      <p className="text-muted-foreground text-sm leading-relaxed">
-                        {teacher.description}
-                      </p>
+                        {/* Description */}
+                        <p className="text-muted-foreground text-sm leading-relaxed">
+                          {teacher.description}
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </ScrollAnimation>
-            ))}
+                </ScrollAnimation>
+              ))}
+            </div>
           </div>
         </div>
 

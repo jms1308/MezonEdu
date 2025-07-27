@@ -167,7 +167,7 @@ export default function IslamicHero() {
           </div>
 
           {/* Right Content - Instructor Profile */}
-          <div className="hidden lg:flex order-1 lg:order-2 justify-center">
+          <div className="hidden lg:flex order-1 lg:order-2 justify-center mt-8">
             <ScrollAnimation animationType="rotateIn" delay={400}>
               <div className="relative group">
                 <div className="w-96 h-96 rounded-full overflow-hidden shadow-2xl transition-transform duration-500 group-hover:scale-105 border border-border">
@@ -179,7 +179,7 @@ export default function IslamicHero() {
                 </div>
                 <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-background/95 backdrop-blur-sm border border-border rounded-full px-6 py-4 shadow-xl transition-all duration-300 group-hover:shadow-2xl group-hover:-translate-y-1">
                   <div className="text-center">
-                    <div className="text-foreground text-lg font-semibold whitespace-nowrap">Muxtorjon Akramov</div>
+                    <div className="text-foreground text-lg font-semibold whitespace-nowrap">Muzaffar Husniddinov</div>
                     <div className="text-primary text-sm font-medium">Moliya Sohasida Mutaxassis</div>
                     <div className="text-muted-foreground text-xs mt-1">10+ yillik tajriba</div>
                   </div>

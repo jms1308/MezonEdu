@@ -52,41 +52,43 @@ export default function LearnSection() {
         </ScrollAnimation>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          {learningModules.map((module, index) => (
-            <ScrollAnimation
-              key={index}
-              animationType="slideUp"
-              delay={index * 150}
-            >
-              <Card className="group relative overflow-hidden transition-all duration-500 hover:scale-105 hover:shadow-xl rounded-[20px] border border-border bg-card shadow-lg hover:shadow-2xl hover:border-primary/50">
-                <CardContent className="p-8">
-                  {/* Icon */}
-                  <div className="mb-6">
-                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center text-primary-foreground group-hover:scale-110 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-primary/25">
-                      {module.icon}
+        <div className="flex justify-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-6xl">
+            {learningModules.map((module, index) => (
+              <ScrollAnimation
+                key={index}
+                animationType="slideUp"
+                delay={index * 150}
+              >
+                <Card className="group relative overflow-hidden transition-all duration-500 hover:scale-105 hover:shadow-xl rounded-[20px] border border-border bg-card shadow-lg hover:shadow-2xl hover:border-primary/50">
+                  <CardContent className="p-8">
+                    {/* Icon */}
+                    <div className="mb-6">
+                      <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center text-primary-foreground group-hover:scale-110 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-primary/25">
+                        {module.icon}
+                      </div>
                     </div>
-                  </div>
 
-                  {/* Content */}
-                  <div className="space-y-3">
-                    <div className="text-sm font-semibold text-primary uppercase tracking-wide">
-                      {module.week}
+                    {/* Content */}
+                    <div className="space-y-3">
+                      <div className="text-sm font-semibold text-primary uppercase tracking-wide">
+                        {module.week}
+                      </div>
+                      <h3 className="text-xl font-bold text-card-foreground font-poppins group-hover:text-primary transition-colors duration-300">
+                        {module.title}
+                      </h3>
+                      <p className="text-muted-foreground leading-relaxed">
+                        {module.description}
+                      </p>
                     </div>
-                    <h3 className="text-xl font-bold text-card-foreground font-poppins group-hover:text-primary transition-colors duration-300">
-                      {module.title}
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed">
-                      {module.description}
-                    </p>
-                  </div>
 
-                  {/* Hover effect overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[20px]" />
-                </CardContent>
-              </Card>
-            </ScrollAnimation>
-          ))}
+                    {/* Hover effect overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[20px]" />
+                  </CardContent>
+                </Card>
+              </ScrollAnimation>
+            ))}
+          </div>
         </div>
 
         {/* Call to Action */}
