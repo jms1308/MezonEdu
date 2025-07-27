@@ -52,8 +52,8 @@ export default function SearchSection() {
           </ScrollAnimation>
 
           {/* Teachers Grid */}
-          <div className="hidden lg:flex justify-center">
-            <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8 max-w-6xl">
+          <div className="flex justify-center">
+            <div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-8 max-w-6xl">
               {teachers.map((teacher, index) => (
                 <ScrollAnimation
                   key={index}
