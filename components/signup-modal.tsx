@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Dialog, DialogTrigger, DialogContent, DialogClose, DialogPortal, DialogOverlay } from "@/components/ui/dialog"
+import { Dialog, DialogTrigger, DialogContent, DialogClose, DialogPortal, DialogOverlay, DialogTitle } from "@/components/ui/dialog"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
@@ -53,10 +53,7 @@ export default function SignupModal({ children, className }: SignupModalProps) {
       <DialogPortal>
         <DialogOverlay className="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm" />
         <DialogContent className="fixed left-1/2 top-1/2 z-50 w-[90vw] max-w-[500px] -translate-x-1/2 -translate-y-1/2 bg-card rounded-[20px] p-0 shadow-2xl border border-border data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] sm:max-w-[500px] sm:w-auto">
-        {/* Close Button */}
-                  <DialogClose className="absolute right-4 top-4 z-10 w-8 h-8 rounded-full bg-muted hover:bg-muted/80 flex items-center justify-center transition-all duration-200 hover:scale-110 border border-border">
-            <X className="w-4 h-4 text-muted-foreground" />
-          </DialogClose>
+        <DialogTitle className="sr-only">Ro'yxatdan o'ting</DialogTitle>
 
         {/* Modal Content */}
         <div className="p-6 sm:px-8 sm:py-8">
@@ -161,4 +158,4 @@ export default function SignupModal({ children, className }: SignupModalProps) {
       </DialogPortal>
     </Dialog>
   )
-} 
+}

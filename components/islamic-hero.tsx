@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button"
 import ScrollAnimation from "./scroll-animation"
+import { useIsMobile } from "@/hooks/use-mobile"
 import SignupModal from "./signup-modal"
 import { useState } from "react";
 
@@ -22,6 +23,7 @@ const smoothScrollTo = (elementId: string) => {
 }
 
 export default function IslamicHero() {
+  const isMobile = useIsMobile();
   return (
     <section id="hero" className="relative min-h-screen overflow-hidden">
       {/* Base gradient background */}
@@ -68,7 +70,7 @@ export default function IslamicHero() {
         <div className="grid lg:grid-cols-2 gap-12 items-center pt-4 lg:pt-8 my-0 pb-0 lg:pb-1">
           {/* Mobile: Image First, Desktop: Text First */}
           <div className="lg:hidden order-1 mb-1 pt-3">
-            <ScrollAnimation animationType="zoomIn" delay={200}>
+            {isMobile ? (
               <div className="relative flex items-center justify-center">
                 <div className="relative group">
                   <div className="w-80 h-80 rounded-full overflow-hidden shadow-2xl border border-border">
@@ -86,84 +88,170 @@ export default function IslamicHero() {
                   </div>
                 </div>
               </div>
-            </ScrollAnimation>
+            ) : (
+              <ScrollAnimation animationType="zoomIn" delay={200}>
+                <div className="relative flex items-center justify-center">
+                  <div className="relative group">
+                    <div className="w-80 h-80 rounded-full overflow-hidden shadow-2xl border border-border">
+                      <img
+                        src="https://i.postimg.cc/Hsjz4Cyb/Untitled-design.jpg"
+                        alt="Islamic Finance Instructor"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-background/95 backdrop-blur-sm border border-border rounded-full px-4 py-3 shadow-xl">
+                      <div className="text-center">
+                        <div className="text-foreground text-base font-semibold whitespace-nowrap">Muxtorjon Akramov</div>
+                        <div className="text-primary text-sm">Moliya Mutaxassisi</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </ScrollAnimation>
+            )}
           </div>
 
           {/* Left Content */}
           <div className="space-y-8 order-2 lg:order-1 text-left lg:pl-16">
-            <ScrollAnimation animationType="slideDown" delay={100}>
-              <div className="space-y-2 mt-0 pt-0">
-                <div className="h-px w-16 bg-gradient-to-r from-green-400 to-transparent" />
-              </div>
-            </ScrollAnimation>
-
-            <ScrollAnimation animationType="left" delay={300}>
-              <div className="space-y-4 leading-7 text-center">
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-center leading-9">
-                  <span className="text-foreground text-5xl">Islom </span>
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/80 text-5xl">
-                    Moliyasi 1.0
-                  </span>
-                  <br />
-                  <span className="text-foreground leading-7 text-5xl">          {""}   </span>
-                </h1>
-                <p className="text-muted-foreground text-lg sm:text-xl leading-relaxed max-w-xl px-0 text-center">
-                  Moliyaviy savodxonlikni Islomiy qadriyatlar asosida o'rganing — halollik, adolat va ijtimoiy mas'uliyat bilan yo'lingizni boshlang
-                </p>
-              </div>
-            </ScrollAnimation>
-
-            <ScrollAnimation animationType="bounceIn" delay={500}>
-              <div className="grid grid-cols-3 gap-6 py-6">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-foreground">12 ta </div>
-                  <div className="text-muted-foreground text-sm">darslar</div>
+            {isMobile ? (
+              <>
+                <div className="space-y-2 mt-0 pt-0">
+                  <div className="h-px w-16 bg-gradient-to-r from-green-400 to-transparent" />
                 </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-primary">1.5 oy</div>
-                  <div className="text-muted-foreground text-sm">ichida</div>
+                <div className="space-y-4 leading-7 text-center">
+                  <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-center leading-9">
+                    <span className="text-foreground text-5xl">Islom </span>
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/80 text-5xl">
+                      Moliyasi 1.0
+                    </span>
+                    <br />
+                    <span className="text-foreground leading-7 text-5xl">          {""}   </span>
+                  </h1>
+                  <p className="text-muted-foreground text-lg sm:text-xl leading-relaxed max-w-xl px-0 text-center">
+                    Moliyaviy savodxonlikni Islomiy qadriyatlar asosida o'rganing — halollik, adolat va ijtimoiy mas'uliyat bilan yo'lingizni boshlang
+                  </p>
                 </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-foreground">3 dan ortiq</div>
-                  <div className="text-muted-foreground text-sm">ustozlar</div>
+                <div className="grid grid-cols-3 gap-6 py-6">
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-foreground">12 ta </div>
+                    <div className="text-muted-foreground text-sm">darslar</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-primary">1.5 oy</div>
+                    <div className="text-muted-foreground text-sm">ichida</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-foreground">3 dan ortiq</div>
+                    <div className="text-muted-foreground text-sm">ustozlar</div>
+                  </div>
                 </div>
-              </div>
-            </ScrollAnimation>
-
-            <ScrollAnimation animationType="slideUp" delay={700}>
-              <div className="flex flex-row gap-4 border-0 px-0 text-justify items-center justify-center mb-8 sm:mb-0">
-                <SignupModal>
+                <div className="flex flex-row gap-4 border-0 px-0 text-justify items-center justify-center mb-8 sm:mb-0">
+                  <SignupModal>
+                    <Button
+                      size="lg"
+                      className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-border hover:border-primary hover:shadow-primary/25 rounded-xl btn-responsive"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="lucide lucide-book-open mr-2 h-5 w-5"
+                      >
+                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                      </svg>
+                      Ro'yxatdan o'tish
+                    </Button>
+                  </SignupModal>
                   <Button
                     size="lg"
-                    className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-border hover:border-primary hover:shadow-primary/25 rounded-xl btn-responsive"
+                    onClick={() => smoothScrollTo("teachers")}
+                    className="bg-transparent hover:bg-primary/20 border-2 hover:border-primary transition-all duration-300 font-semibold hover:shadow-lg hover:shadow-primary/25 hover:scale-105 rounded-xl text-foreground border-gray-300 dark:border-white btn-responsive"
                   >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="lucide lucide-book-open mr-2 h-5 w-5"
-                    >
-                      <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
-                      <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
-                    </svg>
-                    Ro'yxatdan o'tish
+                    Batafsil Ma'lumot
                   </Button>
-                </SignupModal>
-                <Button
-                  size="lg"
-                  onClick={() => smoothScrollTo("teachers")}
-                  className="bg-transparent hover:bg-primary/20 border-2 hover:border-primary transition-all duration-300 font-semibold hover:shadow-lg hover:shadow-primary/25 hover:scale-105 rounded-xl text-foreground border-gray-300 dark:border-white btn-responsive"
-                >
-                  Batafsil Ma'lumot
-                </Button>
-              </div>
-            </ScrollAnimation>
+                </div>
+              </>
+            ) : (
+              <>
+                <ScrollAnimation animationType="slideDown" delay={100}>
+                  <div className="space-y-2 mt-0 pt-0">
+                    <div className="h-px w-16 bg-gradient-to-r from-green-400 to-transparent" />
+                  </div>
+                </ScrollAnimation>
+                <ScrollAnimation animationType="left" delay={300}>
+                  <div className="space-y-4 leading-7 text-center">
+                    <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-center leading-9">
+                      <span className="text-foreground text-5xl">Islom </span>
+                      <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/80 text-5xl">
+                        Moliyasi 1.0
+                      </span>
+                      <br />
+                      <span className="text-foreground leading-7 text-5xl">          {""}   </span>
+                    </h1>
+                    <p className="text-muted-foreground text-lg sm:text-xl leading-relaxed max-w-xl px-0 text-center">
+                      Moliyaviy savodxonlikni Islomiy qadriyatlar asosida o'rganing — halollik, adolat va ijtimoiy mas'uliyat bilan yo'lingizni boshlang
+                    </p>
+                  </div>
+                </ScrollAnimation>
+                <ScrollAnimation animationType="bounceIn" delay={500}>
+                  <div className="grid grid-cols-3 gap-6 py-6">
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-foreground">12 ta </div>
+                      <div className="text-muted-foreground text-sm">darslar</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-primary">1.5 oy</div>
+                      <div className="text-muted-foreground text-sm">ichida</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-foreground">3 dan ortiq</div>
+                      <div className="text-muted-foreground text-sm">ustozlar</div>
+                    </div>
+                  </div>
+                </ScrollAnimation>
+                <ScrollAnimation animationType="slideUp" delay={700}>
+                  <div className="flex flex-row gap-4 border-0 px-0 text-justify items-center justify-center mb-8 sm:mb-0">
+                    <SignupModal>
+                      <Button
+                        size="lg"
+                        className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-border hover:border-primary hover:shadow-primary/25 rounded-xl btn-responsive"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="lucide lucide-book-open mr-2 h-5 w-5"
+                        >
+                          <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                          <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                        </svg>
+                        Ro'yxatdan o'tish
+                      </Button>
+                    </SignupModal>
+                    <Button
+                      size="lg"
+                      onClick={() => smoothScrollTo("teachers")}
+                      className="bg-transparent hover:bg-primary/20 border-2 hover:border-primary transition-all duration-300 font-semibold hover:shadow-lg hover:shadow-primary/25 hover:scale-105 rounded-xl text-foreground border-gray-300 dark:border-white btn-responsive"
+                    >
+                      Batafsil Ma'lumot
+                    </Button>
+                  </div>
+                </ScrollAnimation>
+              </>
+            )}
           </div>
 
           {/* Right Content - Instructor Profile */}
