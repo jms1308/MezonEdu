@@ -41,14 +41,14 @@ export default function FAQSection() {
   }
 
   return (
-    <section id="faq" className="bg-black py-24">
+    <section id="faq" className="bg-background py-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
         {/* Section Header */}
         <ScrollAnimation animationType="flipIn">
           <div className="text-center mb-16 relative">
-            <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">Tez-tez So'raladigan Savollar</h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-green-400 to-green-600 mx-auto mb-6"></div>
-            <p className="text-lg text-white/70 max-w-2xl mx-auto">
+            <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">Tez-tez So'raladigan Savollar</h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-primary to-primary/80 mx-auto mb-6"></div>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Kurs haqida eng ko'p so'raladigan savollarga javoblar
             </p>
           </div>
@@ -58,16 +58,16 @@ export default function FAQSection() {
         <div className="space-y-4 mb-12">
           {faqData.map((faq, index) => (
             <ScrollAnimation key={index} animationType={index % 2 === 0 ? "left" : "right"} delay={index * 100}>
-              <div className="bg-black rounded-lg shadow-sm border border-white/20 overflow-hidden transition-all duration-300 hover:shadow-md hover:border-green-400/50">
+              <div className="bg-card rounded-lg shadow-sm border border-border overflow-hidden transition-all duration-300 hover:shadow-md hover:border-primary/50">
                 <button
                   onClick={() => toggleItem(index)}
                   className="w-full px-6 py-5 text-left flex items-center justify-between group focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-opacity-50"
                 >
-                  <h3 className="text-lg font-semibold text-white group-hover:text-green-400 transition-colors duration-200 pr-4">
+                  <h3 className="text-lg font-semibold text-card-foreground group-hover:text-primary transition-colors duration-200 pr-4">
                     {faq.question}
                   </h3>
                   <div
-                    className={`flex-shrink-0 w-8 h-8 rounded-full bg-green-400 flex items-center justify-center text-black transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg ${openItems.includes(index) ? "rotate-180" : ""}`}
+                    className={`flex-shrink-0 w-8 h-8 rounded-full bg-primary flex items-center justify-center text-primary-foreground transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg ${openItems.includes(index) ? "rotate-180" : ""}`}
                   >
                     {openItems.includes(index) ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
                   </div>
@@ -79,8 +79,8 @@ export default function FAQSection() {
                 `}
                 >
                   <div className="px-6 pb-5">
-                    <div className="border-t border-white/20 pt-4">
-                      <p className="text-white/70 leading-relaxed">{faq.answer}</p>
+                    <div className="border-t border-border pt-4">
+                      <p className="text-muted-foreground leading-relaxed">{faq.answer}</p>
                     </div>
                   </div>
                 </div>
@@ -92,12 +92,12 @@ export default function FAQSection() {
         {/* Call to Action */}
         <ScrollAnimation animationType="zoomIn" delay={600}>
           <div className="text-center">
-            <div className="bg-black rounded-lg p-8 shadow-lg border border-white/20">
-              <h3 className="text-xl font-semibold text-white mb-3">Hali ham savollaringiz bormi?</h3>
-              <p className="text-white/70 mb-6">Bizning mutaxassislarimiz sizga yordam berishga tayyor</p>
+            <div className="bg-card rounded-lg p-8 shadow-lg border border-border">
+              <h3 className="text-xl font-semibold text-card-foreground mb-3">Hali ham savollaringiz bormi?</h3>
+              <p className="text-muted-foreground mb-6">Bizning mutaxassislarimiz sizga yordam berishga tayyor</p>
               <Button
                 size="lg"
-                className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 font-semibold transition-all duration-300 hover:shadow-lg hover:scale-105 border border-white/20 hover:border-green-400 hover:shadow-green-400/25 rounded-xl"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 font-semibold transition-all duration-300 hover:shadow-lg hover:scale-105 border border-border hover:border-primary hover:shadow-primary/25 rounded-xl"
               >
                 Biz Bilan Bog'laning
               </Button>

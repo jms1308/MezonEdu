@@ -20,9 +20,9 @@ const pricingPlans = [
     buttonText: "Get Started",
     popular: false,
     icon: <Zap className="h-6 w-6" />,
-    bgColor: "bg-green-600",
-    hoverColor: "hover:bg-green-700",
-    textColor: "text-white",
+    bgColor: "bg-primary",
+    hoverColor: "hover:bg-primary/90",
+    textColor: "text-primary-foreground",
   },
   {
     name: "Pro Plan",
@@ -39,9 +39,9 @@ const pricingPlans = [
     buttonText: "Choose Pro",
     popular: true,
     icon: <Star className="h-6 w-6" />,
-    bgColor: "bg-green-500",
-    hoverColor: "hover:bg-green-600",
-    textColor: "text-white",
+    bgColor: "bg-primary",
+    hoverColor: "hover:bg-primary/90",
+    textColor: "text-primary-foreground",
   },
   {
     name: "Elite Plan",
@@ -58,21 +58,21 @@ const pricingPlans = [
     buttonText: "Go Elite",
     popular: false,
     icon: <Crown className="h-6 w-6" />,
-    bgColor: "bg-green-600",
-    hoverColor: "hover:bg-green-700",
-    textColor: "text-white",
+    bgColor: "bg-primary",
+    hoverColor: "hover:bg-primary/90",
+    textColor: "text-primary-foreground",
   },
 ]
 
 export default function PricingSection() {
   return (
-    <section id="pricing" className="bg-black py-24">
+    <section id="pricing" className="bg-background py-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <ScrollAnimation animationType="rotateIn">
           <div className="flex flex-col items-center text-center mb-16">
-            <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">Tariflar</h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-green-400 to-green-600 mx-auto mt-4 mb-6"></div>
-            <p className="mt-4 max-w-2xl text-lg text-white/70">
+            <h2 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">Tariflar</h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-primary to-primary/80 mx-auto mt-4 mb-6"></div>
+            <p className="mt-4 max-w-2xl text-lg text-muted-foreground">
               O'zingizga qulay tarifni tanlang va ro'yxatdan o'ting
             </p>
           </div>
@@ -88,12 +88,12 @@ export default function PricingSection() {
               <Card
                 className={`relative overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl rounded-lg h-full flex flex-col ${
                   plan.popular
-                    ? "border-2 border-green-400 bg-black shadow-xl"
-                    : "border border-white/20 bg-black hover:border-green-400/50"
+                    ? "border-2 border-primary bg-card shadow-xl"
+                    : "border border-border bg-card hover:border-primary/50"
                 }`}
               >
                 {plan.popular && (
-                  <div className="absolute top-0 right-0 bg-green-400 text-black px-4 py-1 text-sm font-medium rounded-bl-lg">
+                  <div className="absolute top-0 right-0 bg-primary text-primary-foreground px-4 py-1 text-sm font-medium rounded-bl-lg">
                     Most Popular
                   </div>
                 )}
@@ -101,17 +101,17 @@ export default function PricingSection() {
                 <CardHeader className="text-center pb-8 flex-shrink-0">
                   <div
                     className={`mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full ${
-                      plan.popular ? "bg-green-400/20 text-green-400" : "bg-white/20 text-white"
+                      plan.popular ? "bg-primary/20 text-primary" : "bg-muted text-muted-foreground"
                     }`}
                   >
                     {plan.icon}
                   </div>
-                  <CardTitle className="text-2xl font-bold text-white">{plan.name}</CardTitle>
+                  <CardTitle className="text-2xl font-bold text-card-foreground">{plan.name}</CardTitle>
                   <div className="mt-4">
-                    <span className="text-4xl font-bold text-white">{plan.price}</span>
-                    <span className="text-white/70">{plan.period}</span>
+                    <span className="text-4xl font-bold text-card-foreground">{plan.price}</span>
+                    <span className="text-muted-foreground">{plan.period}</span>
                   </div>
-                  <CardDescription className="mt-4 text-white/70">{plan.description}</CardDescription>
+                  <CardDescription className="mt-4 text-muted-foreground">{plan.description}</CardDescription>
                 </CardHeader>
 
                 <CardContent className="space-y-4 flex-1">
@@ -119,9 +119,9 @@ export default function PricingSection() {
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-start gap-3">
                         <Check
-                          className={`h-5 w-5 mt-0.5 flex-shrink-0 ${plan.popular ? "text-green-400" : "text-green-500"}`}
+                          className={`h-5 w-5 mt-0.5 flex-shrink-0 ${plan.popular ? "text-primary" : "text-primary"}`}
                         />
-                        <span className="text-white/70 text-sm">{feature}</span>
+                        <span className="text-muted-foreground text-sm">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -129,7 +129,7 @@ export default function PricingSection() {
 
                 <CardFooter className="pt-6 flex-shrink-0">
                   <Button
-                    className={`w-full py-3 font-semibold transition-all duration-300 rounded-lg border border-white/20 hover:border-green-400 hover:shadow-green-400/25 ${plan.bgColor} ${plan.hoverColor} ${plan.textColor} hover:shadow-lg`}
+                    className={`w-full py-3 font-semibold transition-all duration-300 rounded-lg border border-border hover:border-primary hover:shadow-primary/25 bg-primary hover:bg-primary/90 text-primary-foreground hover:shadow-lg`}
                   >
                     {plan.buttonText}
                   </Button>
@@ -141,7 +141,7 @@ export default function PricingSection() {
 
         <ScrollAnimation animationType="fade" delay={600}>
           <div className="mt-16 text-center">
-            <p className="text-white/70 text-sm">
+            <p className="text-muted-foreground text-sm">
               Hamma tariflar 12ta darsdan iborat to'liq kursni inobatga olgan holda tuzib chiqilgan
             </p>
           </div>

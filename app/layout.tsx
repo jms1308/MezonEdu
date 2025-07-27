@@ -2,6 +2,7 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Inter, Poppins } from "next/font/google"
 import "./globals.css"
+import { ThemeProvider } from "@/components/theme-provider"
 
 const inter = Inter({ subsets: ["latin"] })
 const poppins = Poppins({ 
@@ -10,10 +11,9 @@ const poppins = Poppins({
   variable: "--font-poppins"
 })
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "MezonEdu - Islom Moliyasi Kurslari",
   description: "Zamonaviy dunyoda Islom moliya tamoyillarini o'rganish va amalda qo'llash",
-    generator: 'v0.dev'
 }
 
 export default function RootLayout({
@@ -22,8 +22,17 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="uz">
-      <body className={`${inter.className} ${poppins.variable}`}>{children}</body>
+    <html lang="uz" suppressHydrationWarning>
+      <body className={`${inter.className} ${poppins.variable} transition-colors duration-300`}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   )
 }
