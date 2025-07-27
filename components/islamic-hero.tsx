@@ -65,7 +65,7 @@ export default function IslamicHero() {
       <div className="absolute inset-0 bg-white/20 dark:bg-black/20 backdrop-blur-[1px] transition-all duration-700 ease-in-out" />
 
       <div className="container mx-auto px-4 sm:px-6 max-w-7xl relative z-10 lg:px-1.5">
-        <div className="grid lg:grid-cols-2 gap-12 items-center pt-2 lg:pt-16 my-0">
+        <div className="grid lg:grid-cols-2 gap-12 items-center pt-4 lg:pt-8 my-0 pb-0 lg:pb-1">
           {/* Mobile: Image First, Desktop: Text First */}
           <div className="lg:hidden order-1 mb-1 pt-3">
             <ScrollAnimation animationType="zoomIn" delay={200}>
@@ -73,14 +73,14 @@ export default function IslamicHero() {
                 <div className="relative group">
                   <div className="w-80 h-80 rounded-full overflow-hidden shadow-2xl border border-border">
                     <img
-                      src="https://i.postimg.cc/BvPnZWxg/Post-to-FB-Muzaffar.png"
+                      src="https://i.postimg.cc/Hsjz4Cyb/Untitled-design.jpg"
                       alt="Islamic Finance Instructor"
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-background/95 backdrop-blur-sm border border-border rounded-full px-4 py-3 shadow-xl">
                     <div className="text-center">
-                      <div className="text-foreground text-base font-semibold whitespace-nowrap">Muzaffar Husniddinov</div>
+                      <div className="text-foreground text-base font-semibold whitespace-nowrap">Muxtorjon Akramov</div>
                       <div className="text-primary text-sm">Moliya Mutaxassisi</div>
                     </div>
                   </div>
@@ -172,14 +172,14 @@ export default function IslamicHero() {
               <div className="relative group">
                 <div className="w-96 h-96 rounded-full overflow-hidden shadow-2xl transition-transform duration-500 group-hover:scale-105 border border-border">
                   <img
-                    src="https://i.postimg.cc/BvPnZWxg/Post-to-FB-Muzaffar.png"
+                    src="https://i.postimg.cc/Hsjz4Cyb/Untitled-design.jpg"
                     alt="Islamic Finance Instructor"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                 </div>
                 <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-background/95 backdrop-blur-sm border border-border rounded-full px-6 py-4 shadow-xl transition-all duration-300 group-hover:shadow-2xl group-hover:-translate-y-1">
                   <div className="text-center">
-                    <div className="text-foreground text-lg font-semibold whitespace-nowrap">Muzaffar Husniddinov</div>
+                    <div className="text-foreground text-lg font-semibold whitespace-nowrap">Muxtorjon Akramov</div>
                     <div className="text-primary text-sm font-medium">Moliya Sohasida Mutaxassis</div>
                     <div className="text-muted-foreground text-xs mt-1">10+ yillik tajriba</div>
                   </div>
