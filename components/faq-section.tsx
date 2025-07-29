@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
+import SignupModal from "./signup-modal"
 import { Plus, Minus } from "lucide-react"
 import ScrollAnimation from "./scroll-animation"
 
@@ -95,12 +96,14 @@ export default function FAQSection() {
             <div className="bg-card rounded-lg p-8 shadow-lg border border-border">
               <h3 className="text-xl font-semibold text-card-foreground mb-3">Hali ham savollaringiz bormi?</h3>
               <p className="text-muted-foreground mb-6">Bizning mutaxassislarimiz sizga yordam berishga tayyor</p>
-              <Button
-                size="lg"
-                className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 font-semibold transition-all duration-300 hover:shadow-lg hover:scale-105 border border-border hover:border-primary hover:shadow-primary/25 rounded-xl"
-              >
-                Biz Bilan Bog'laning
-              </Button>
+              <SignupModal>
+                <Button
+                  size="lg"
+                  className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 font-semibold transition-all duration-300 hover:shadow-lg hover:scale-105 border border-border hover:border-primary hover:shadow-primary/25 rounded-xl"
+                >
+                  Biz Bilan Bog'laning
+                </Button>
+              </SignupModal>
             </div>
           </div>
         </ScrollAnimation>

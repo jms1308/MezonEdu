@@ -5,7 +5,7 @@ import { Dialog, DialogTrigger, DialogContent, DialogClose, DialogPortal, Dialog
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { X, CheckCircle, User, Phone, GraduationCap } from "lucide-react"
+import { X, CheckCircle, User, Phone, GraduationCap, XCircle } from "lucide-react"
 
 interface SignupModalProps {
   children: React.ReactNode
@@ -22,6 +22,7 @@ const courseOptions = [
 export default function SignupModal({ children, className }: SignupModalProps) {
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
+  const [isError, setIsError] = useState(false)
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -42,11 +43,16 @@ export default function SignupModal({ children, className }: SignupModalProps) {
     params.append("number", formData.phone);
     params.append("job", formData.course);
     setIsLoading(true);
+    setIsError(false);
     try {
       const res = await fetch("https://script.google.com/macros/s/AKfycbwA1izeC-6JYcoem4yvLfJQ7qix2H2Chpw91f3o7u0DG9YS8jXofkX0TQMgil0JX1xKoA/exec", {
         method: "POST",
         body: params
       });
+      // If status is not 200, treat as error (for robustness, though Apps Script may not return status)
+      if (!res.ok) {
+        throw new Error("Request failed");
+      }
       setIsLoading(false);
       setIsSubmitted(true);
       setTimeout(() => {
@@ -55,6 +61,10 @@ export default function SignupModal({ children, className }: SignupModalProps) {
       }, 3000);
     } catch (e) {
       setIsLoading(false);
+      setIsError(true);
+      setTimeout(() => {
+        setIsError(false);
+      }, 3000);
       console.log("Signup error", e);
     }
   }
@@ -87,6 +97,19 @@ export default function SignupModal({ children, className }: SignupModalProps) {
                 <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"></path>
               </svg>
               <div className="text-primary text-lg font-semibold">Yuborilmoqda...</div>
+            </div>
+          ) : isError ? (
+            /* Error Message */
+            <div className="text-center py-6 sm:py-6">
+              <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <XCircle className="w-8 h-8 text-red-500" />
+              </div>
+              <h3 className="text-lg sm:text-xl font-bold text-card-foreground mb-2 font-poppins">
+                ❌ Ma'lumotlarni yuborishda xatolik yuz berdi!
+              </h3>
+              <p className="text-muted-foreground text-sm">
+                Iltimos, qayta urinib ko'ring
+              </p>
             </div>
           ) : !isSubmitted ? (
             <>

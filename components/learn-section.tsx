@@ -1,6 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
+import SignupModal from "./signup-modal"
 import { Card, CardContent } from "@/components/ui/card"
 import { BookOpen, Target, Award, TrendingUp, Calculator, Shield, Users, Zap } from "lucide-react"
 import ScrollAnimation from "./scroll-animation"
@@ -94,12 +95,14 @@ export default function LearnSection() {
         {/* Call to Action */}
         <ScrollAnimation animationType="zoomIn" delay={800}>
           <div className="text-center mt-16">
-            <Button
-              size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 font-poppins border border-primary/20 hover:border-primary hover:shadow-primary/25"
-            >
-              Hoziroq boshlash
-            </Button>
+            <SignupModal>
+              <Button
+                size="lg"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 font-poppins border border-primary/20 hover:border-primary hover:shadow-primary/25"
+              >
+                Hoziroq boshlash
+              </Button>
+            </SignupModal>
           </div>
         </ScrollAnimation>
       </div>
