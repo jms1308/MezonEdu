@@ -34,21 +34,18 @@ export default function SignupModal({ children, className }: SignupModalProps) {
       job: formData.course,
     };
     try {
-      const res = await fetch("https://script.google.com/macros/s/AKfycbzryMkN5YX7hVgJ2SWgj7DIMlLOcuf1FkWu9G7xmrwVQ_0WDiV3YOTE71TiYsX45DA/exec", {
+      await fetch("https://script.google.com/macros/s/AKfycbzryMkN5YX7hVgJ2SWgj7DIMlLOcuf1FkWu9G7xmrwVQ_0WDiV3YOTE71TiYsX45DA/exec", {
         method: "POST",
+        mode: "no-cors",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload)
       });
-      if (res.ok) {
-        console.log("Signup successful");
-        setIsSubmitted(true);
-        setTimeout(() => {
-          setIsSubmitted(false);
-          setFormData({ name: "", phone: "", course: "" });
-        }, 3000);
-      } else {
-        console.log("Signup failed", await res.text());
-      }
+      // Always show success in no-cors mode
+      setIsSubmitted(true);
+      setTimeout(() => {
+        setIsSubmitted(false);
+        setFormData({ name: "", phone: "", course: "" });
+      }, 3000);
     } catch (e) {
       console.log("Signup error", e);
     }
