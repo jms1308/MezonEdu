@@ -18,21 +18,31 @@ const courseOptions = [
   { value: "professional", label: "Professional" },
 ]
 
+
 export default function SignupModal({ children, className }: SignupModalProps) {
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
     course: "",
   })
+  const [courseError, setCourseError] = useState(false)
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!formData.course) {
+      setCourseError(true);
+      return;
+    } else {
+      setCourseError(false);
+    }
     const payload = {
       name: formData.name,
       number: formData.phone,
       job: formData.course,
     };
+    setIsLoading(true);
     try {
       await fetch("https://script.google.com/macros/s/AKfycbzryMkN5YX7hVgJ2SWgj7DIMlLOcuf1FkWu9G7xmrwVQ_0WDiV3YOTE71TiYsX45DA/exec", {
         method: "POST",
@@ -40,19 +50,23 @@ export default function SignupModal({ children, className }: SignupModalProps) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload)
       });
-      // Always show success in no-cors mode
+      setIsLoading(false);
       setIsSubmitted(true);
       setTimeout(() => {
         setIsSubmitted(false);
         setFormData({ name: "", phone: "", course: "" });
       }, 3000);
     } catch (e) {
+      setIsLoading(false);
       console.log("Signup error", e);
     }
   }
 
   const handleInputChange = (field: string, value: string) => {
     setFormData(prev => ({ ...prev, [field]: value }))
+    if (field === "course" && value) {
+      setCourseError(false);
+    }
   }
 
   return (
@@ -69,7 +83,15 @@ export default function SignupModal({ children, className }: SignupModalProps) {
 
         {/* Modal Content */}
         <div className="p-6 sm:px-8 sm:py-8">
-          {!isSubmitted ? (
+          {isLoading ? (
+            <div className="flex flex-col items-center justify-center py-10">
+              <svg className="animate-spin h-10 w-10 text-primary mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"></path>
+              </svg>
+              <div className="text-primary text-lg font-semibold">Yuborilmoqda...</div>
+            </div>
+          ) : !isSubmitted ? (
             <>
               {/* Header */}
               <div className="text-center mb-6 sm:mb-6">
@@ -122,7 +144,7 @@ export default function SignupModal({ children, className }: SignupModalProps) {
                     Kurs tanlang
                   </label>
                   <Select value={formData.course} onValueChange={(value) => handleInputChange("course", value)}>
-                    <SelectTrigger className="h-11 sm:h-10 bg-background border-border text-foreground placeholder:text-muted-foreground focus:border-primary focus:ring-primary/20 rounded-xl transition-all duration-200 text-sm">
+                    <SelectTrigger className={`h-11 sm:h-10 bg-background border-border text-foreground placeholder:text-muted-foreground focus:border-primary focus:ring-primary/20 rounded-xl transition-all duration-200 text-sm ${courseError ? 'border-red-500' : ''}`}>
                       <SelectValue placeholder="Kurs darajasini tanlang" />
                     </SelectTrigger>
                     <SelectContent className="bg-card border-border rounded-xl">
@@ -133,6 +155,9 @@ export default function SignupModal({ children, className }: SignupModalProps) {
                       ))}
                     </SelectContent>
                   </Select>
+                  {courseError && (
+                    <div className="text-xs text-red-500 mt-1">Kurs darajasini tanlash majburiy</div>
+                  )}
                 </div>
 
                 {/* Submit Button */}
