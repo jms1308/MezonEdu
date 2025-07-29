@@ -36,7 +36,6 @@ export default function SignupModal({ children, className }: SignupModalProps) {
     try {
       const res = await fetch("https://script.google.com/macros/s/AKfycbzryMkN5YX7hVgJ2SWgj7DIMlLOcuf1FkWu9G7xmrwVQ_0WDiV3YOTE71TiYsX45DA/exec", {
         method: "POST",
-        mode: "no-cors", // <<< shu qo‘shildi
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload)
       });
