@@ -13,9 +13,10 @@ interface SignupModalProps {
 }
 
 const courseOptions = [
-  { value: "boshlangich", label: "Boshlang'ich" },
-  { value: "orta", label: "O'rta" },
-  { value: "professional", label: "Professional" },
+  { value: "tadbirkor", label: "Tadbirkor" },
+  { value: "talaba", label: "Talaba" },
+  { value: "iqtisodchi", label: "Iqtisodchi" },
+  { value: "boshqa", label: "Boshqa" },
 ]
 
 
@@ -161,7 +162,7 @@ export default function SignupModal({ children, className }: SignupModalProps) {
                 <div className="space-y-2 sm:space-y-2">
                   <label className="text-sm font-medium text-card-foreground flex items-center gap-2">
                     <GraduationCap className="w-4 h-4 text-primary" />
-                    Kurs tanlang
+                    Sohangizni tanlang
                   </label>
                   <Select value={formData.course} onValueChange={(value) => handleInputChange("course", value)}>
                     <SelectTrigger className={`h-11 sm:h-10 bg-background border-border text-foreground placeholder:text-muted-foreground focus:border-primary focus:ring-primary/20 rounded-xl transition-all duration-200 text-sm ${courseError ? 'border-red-500' : ''}`}>
@@ -176,7 +177,7 @@ export default function SignupModal({ children, className }: SignupModalProps) {
                     </SelectContent>
                   </Select>
                   {courseError && (
-                    <div className="text-xs text-red-500 mt-1">Kurs darajasini tanlash majburiy</div>
+                    <div className="text-xs text-red-500 mt-1">Sohangizni tanlash majburiy</div>
                   )}
                 </div>
 
