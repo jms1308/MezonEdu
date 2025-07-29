@@ -37,18 +37,15 @@ export default function SignupModal({ children, className }: SignupModalProps) {
     } else {
       setCourseError(false);
     }
-    const payload = {
-      name: formData.name,
-      number: formData.phone,
-      job: formData.course,
-    };
+    const params = new URLSearchParams();
+    params.append("name", formData.name);
+    params.append("number", formData.phone);
+    params.append("job", formData.course);
     setIsLoading(true);
     try {
-      await fetch("https://script.google.com/macros/s/AKfycbzryMkN5YX7hVgJ2SWgj7DIMlLOcuf1FkWu9G7xmrwVQ_0WDiV3YOTE71TiYsX45DA/exec", {
+      const res = await fetch("https://script.google.com/macros/s/AKfycbzryMkN5YX7hVgJ2SWgj7DIMlLOcuf1FkWu9G7xmrwVQ_0WDiV3YOTE71TiYsX45DA/exec", {
         method: "POST",
-        mode: "no-cors",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload)
+        body: params
       });
       setIsLoading(false);
       setIsSubmitted(true);
