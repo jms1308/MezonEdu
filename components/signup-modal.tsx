@@ -43,7 +43,7 @@ export default function SignupModal({ children, className }: SignupModalProps) {
     params.append("job", formData.course);
     setIsLoading(true);
     try {
-      const res = await fetch("https://script.google.com/macros/s/AKfycbzryMkN5YX7hVgJ2SWgj7DIMlLOcuf1FkWu9G7xmrwVQ_0WDiV3YOTE71TiYsX45DA/exec", {
+      const res = await fetch("https://script.google.com/macros/s/AKfycbwA1izeC-6JYcoem4yvLfJQ7qix2H2Chpw91f3o7u0DG9YS8jXofkX0TQMgil0JX1xKoA/exec", {
         method: "POST",
         body: params
       });
