@@ -26,17 +26,32 @@ export default function SignupModal({ children, className }: SignupModalProps) {
     course: "",
   })
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitted(true)
-      // Reset form after 3 seconds
-      setTimeout(() => {
-        setIsSubmitted(false)
-        setFormData({ name: "", phone: "", course: "" })
-      }, 3000)
-    }, 1000)
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const payload = {
+      name: formData.name,
+      number: formData.phone,
+      job: formData.course,
+    };
+    try {
+      const res = await fetch("https://script.google.com/macros/s/AKfycbz8FEfBSTAxSmUcXU7sZZ_PZ9JDL82bytptPnJUb6NZ5ZcAMHoyWeSorgDWtSJcP_FG/exec", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+      });
+      if (res.ok) {
+        console.log("Signup successful");
+        setIsSubmitted(true);
+        setTimeout(() => {
+          setIsSubmitted(false);
+          setFormData({ name: "", phone: "", course: "" });
+        }, 3000);
+      } else {
+        console.log("Signup failed", await res.text());
+      }
+    } catch (e) {
+      console.log("Signup error", e);
+    }
   }
 
   const handleInputChange = (field: string, value: string) => {
