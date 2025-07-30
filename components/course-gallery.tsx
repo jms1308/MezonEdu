@@ -7,37 +7,37 @@ import ScrollAnimation from "./scroll-animation"
 const courseImages = [
   {
     id: 1,
-    src: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=600&fit=crop",
+    src: "https://i.postimg.cc/tJpDBVTY/1.jpg",
     alt: "Islom moliyasi darsi - 1",
     title: "Asosiy tushunchalar darsi"
   },
   {
     id: 2,
-    src: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=600&fit=crop",
+    src: "https://i.postimg.cc/pdvZWFfk/2.jpg",
     alt: "Islom moliyasi darsi - 2",
     title: "Halol investitsiya usullari"
   },
   {
     id: 3,
-    src: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop",
+    src: "https://i.postimg.cc/3r0nZYxX/3.jpg",
     alt: "Islom moliyasi darsi - 3",
     title: "Amaliy mashg'ulotlar"
   },
   {
     id: 4,
-    src: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800&h=600&fit=crop",
+    src: "https://i.postimg.cc/0N6wq53Z/4.jpg",
     alt: "Islom moliyasi darsi - 4",
     title: "Guruh muhokamalari"
   },
   {
     id: 5,
-    src: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&h=600&fit=crop",
+    src: "https://i.postimg.cc/R0jnC5xm/5.jpg",
     alt: "Islom moliyasi darsi - 5",
     title: "Case study loyihalari"
   },
   {
     id: 6,
-    src: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=600&fit=crop",
+    src: "https://i.postimg.cc/rsT0W1pY/6.jpg",
     alt: "Islom moliyasi darsi - 6",
     title: "Sertifikat topshirish"
   }

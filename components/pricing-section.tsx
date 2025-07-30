@@ -8,11 +8,11 @@ import ScrollAnimation from "./scroll-animation"
 const pricingPlans = [
   {
     name: "Basic Plan",
-    price: "$29",
-    period: "/month",
+    price: "7,000,000 UZS",
+    period: "",
     description: "Perfect for beginners looking to start their learning journey.",
     features: [
-      "Access to core course content",
+      "12 ta dars",
       "5 video lessons per month",
       "Community support",
       "Certificate of completion",
@@ -26,8 +26,8 @@ const pricingPlans = [
   },
   {
     name: "Pro Plan",
-    price: "$59",
-    period: "/month",
+    price: "12,000,000 UZS",
+    period: "",
     description: "Ideal for serious learners who want more resources and support.",
     features: [
       "All Basic Plan features",
@@ -45,8 +45,8 @@ const pricingPlans = [
   },
   {
     name: "Elite Plan",
-    price: "$99",
-    period: "/month",
+    price: "16,000,000 UZS",
+    period: "",
     description: "For professionals aiming to master the course with exclusive benefits.",
     features: [
       "All Pro Plan features",
@@ -108,7 +108,7 @@ export default function PricingSection() {
                   </div>
                   <CardTitle className="text-2xl font-bold text-card-foreground">{plan.name}</CardTitle>
                   <div className="mt-4">
-                    <span className="text-4xl font-bold text-card-foreground">{plan.price}</span>
+                    <span className="text-2xl font-bold text-card-foreground">{plan.price}</span>
                     <span className="text-muted-foreground">{plan.period}</span>
                   </div>
                   <CardDescription className="mt-4 text-muted-foreground">{plan.description}</CardDescription>
