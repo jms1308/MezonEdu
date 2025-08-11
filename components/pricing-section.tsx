@@ -20,7 +20,7 @@ const pricingPlans = [
     ],
     buttonText: "Ro'yxatdan o'tish",
     popular: false,
-    icon: <Check className="h-6 w-6" />,
+    icon: <Check className="h-6 w-6 text-primary" />,
     priceColor: "text-blue-600",
   },
   {
@@ -39,7 +39,7 @@ const pricingPlans = [
     ],
     buttonText: "Ro'yxatdan o'tish",
     popular: true,
-    icon: <Star className="h-6 w-6" />,
+    icon: <Star className="h-6 w-6 text-primary" />,
     priceColor: "text-green-600",
   }
 ]
@@ -48,6 +48,8 @@ export default function PricingSection() {
   return (
     <section id="pricing" className="bg-background py-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+        
+        {/* Sarlavha */}
         <ScrollAnimation animationType="rotateIn">
           <div className="flex flex-col items-center text-center mb-16">
             <h2 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">Tariflar</h2>
@@ -58,9 +60,8 @@ export default function PricingSection() {
           </div>
         </ScrollAnimation>
 
-        {/* Grid markazlashtirish */}
-        <div className="grid grid-cols-4 gap-8 justify-items-center">
-          <div></div> {/* Bo‘sh joy */}
+        {/* Tarif kartalari */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6 justify-center">
           {pricingPlans.map((plan, index) => (
             <ScrollAnimation
               key={index}
@@ -68,7 +69,7 @@ export default function PricingSection() {
               delay={index * 200}
             >
               <Card
-                className={`relative overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl rounded-lg flex flex-col w-full ${
+                className={`relative overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl rounded-lg flex flex-col w-full max-w-[400px] mx-auto ${
                   plan.popular
                     ? "border-2 border-primary bg-card shadow-xl"
                     : "border border-border bg-card hover:border-primary/50"
@@ -81,19 +82,15 @@ export default function PricingSection() {
                 )}
 
                 <CardHeader className="text-center pb-8 flex-shrink-0">
-                  <div
-                    className={`mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full ${
-                      plan.popular ? "bg-primary/20 text-primary" : "bg-muted text-muted-foreground"
-                    }`}
-                  >
+                  <div className="flex items-center justify-center w-12 h-12 mx-auto mb-4 rounded-full bg-primary/10">
                     {plan.icon}
                   </div>
-                  <CardTitle className="text-3xl font-bold text-card-foreground">{plan.name}</CardTitle>
+                  <CardTitle className="text-xl font-bold text-card-foreground">{plan.name}</CardTitle>
                   <div className="mt-4">
-                    <span className={`text-3xl font-bold ${plan.priceColor}`}>{plan.price}</span>
-                    <span className="text-muted-foreground">{plan.period}</span>
+                    <span className={`text-xl font-bold ${plan.priceColor}`}>{plan.price}</span>
+                    <span className="text-muted-foreground text-sm">{plan.period}</span>
                   </div>
-                  <CardDescription className="mt-4 text-muted-foreground text-lg">{plan.description}</CardDescription>
+                  <CardDescription className="mt-4 text-muted-foreground text-base">{plan.description}</CardDescription>
                 </CardHeader>
 
                 <CardContent className="space-y-4 flex-1">
@@ -101,7 +98,7 @@ export default function PricingSection() {
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-start gap-3">
                         <Check className="h-5 w-5 mt-0.5 flex-shrink-0 text-primary" />
-                        <span className="text-muted-foreground text-base">{feature}</span>
+                        <span className="text-muted-foreground text-sm">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -115,9 +112,9 @@ export default function PricingSection() {
               </Card>
             </ScrollAnimation>
           ))}
-          <div></div> {/* Bo‘sh joy */}
         </div>
 
+        {/* Pastki matn */}
         <ScrollAnimation animationType="fade" delay={600}>
           <div className="mt-16 text-center">
             <p className="text-muted-foreground text-sm">
