@@ -15,20 +15,20 @@ const learningModules = [
   },
   {
     week: "2-modul", 
-    title: "Savdo va sherikchilik",
-    description: "Savdo va sherikchilik asoslari.",
+    title: "Asosiy moliyaviy instrumentlar",
+    description: "Mushoraka, Mudoraba, Ijara, Salam kabi instrumentlar.",
     icon: <Target className="w-8 h-8" />,
   },
   {
     week: "3-modul",
-    title: "Investitsiya asoslari",
-    description: "Investitsiya, aksiyalarga sarmoyalar asoslari",
+    title: "Islomiy banklar va moliyaviy tizimlar",
+    description: "Islomiy banklarning tuzilishi va ishlash prinsipi.",
     icon: <Calculator className="w-8 h-8" />,
   },
   {
     week: "4-modul",
-    title: "Qarz va moliya",
-    description: "Qarz olish va moliyaviy boshqaruv asoslari.",
+    title: "Islom moliyasida zamonaviy masalalar",
+    description: "Islom moliyasi loyihalari tahlili.",
     icon: <TrendingUp className="w-8 h-8" />,
   },
 ]

@@ -75,7 +75,7 @@ export default function IslamicHero() {
                 <div className="relative group">
                   <div className="w-80 h-80 rounded-full overflow-hidden shadow-2xl border border-border">
                     <img
-                      src="https://i.postimg.cc/Hsjz4Cyb/Untitled-design.jpg"
+                      src="https://i.postimg.cc/bYt1yc1j/photo-2025-08-11-07-47-44.jpg"
                       alt="Islamic Finance Instructor"
                       className="w-full h-full object-cover"
                     />
@@ -260,7 +260,7 @@ export default function IslamicHero() {
               <div className="relative group">
                 <div className="w-96 h-96 rounded-full overflow-hidden shadow-2xl transition-transform duration-500 group-hover:scale-105 border border-border">
                   <img
-                    src="https://i.postimg.cc/Hsjz4Cyb/Untitled-design.jpg"
+                    src="https://i.postimg.cc/bYt1yc1j/photo-2025-08-11-07-47-44.jpg"
                     alt="Islamic Finance Instructor"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
