@@ -9,10 +9,10 @@ import ScrollAnimation from "./scroll-animation"
 
 const teachers = [
   {
-    name: "Muhammad Ayyubxon ustoz",
-    experience: "20 yillik tajriba",
+    name: "Muhammad Ayyubxon",
+    experience: "10 yillik tajriba",
     image: "https://i.postimg.cc/DfgSnGVZ/Post-to-FB-Muzaffar-1.png",
-    description: "Islom moliyasida ekspert",
+    description: "Islom moliyasida mutaxassis",
     specialization: "Islomiy Bankchilik",
     achievements: "500+ talaba tayyorlagan",
     rating: 4.9,
@@ -21,7 +21,7 @@ const teachers = [
     name: "Muzaffar Husniddinov",
     experience: "12 yil Biznes Sohasida",
     image: "https://i.postimg.cc/BvPnZWxg/Post-to-FB-Muzaffar.png",
-    description: "Islom moliyasida ekspert",
+    description: "Mezon Kengashi asoschisi",
     specialization: "Halol Investitsiya",
     achievements: "200+ biznes loyiha",
     rating: 4.9,
@@ -43,10 +43,10 @@ export default function SearchSection() {
           <ScrollAnimation animationType="slideDown">
             <div className="text-center mb-20">
               <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-6 font-poppins">
-                Bizning Mutaxassis Ustozlarimiz
+                Bizning mutaxassis ustozlarimiz
               </h2>
               <p className="text-muted-foreground text-lg max-w-3xl mx-auto leading-relaxed">
-                Siz bilan ishlaydigan malakali mutaxassislar
+                Qo'shimcha darslarda qatnashadigan ustozlar
               </p>
             </div>
           </ScrollAnimation>

@@ -8,27 +8,27 @@ import ScrollAnimation from "./scroll-animation"
 
 const learningModules = [
   {
-    week: "1-hafta",
+    week: "1-modul",
     title: "Asosiy bilimlar",
-    description: "Moliyaviy tushunchalar va asosiy tamoyillarni o'rganasiz.",
+    description: "Islom moliyasi asoslari va asosiy tushunchalar.",
     icon: <BookOpen className="w-8 h-8" />,
   },
   {
-    week: "2-hafta", 
-    title: "Halol investitsiya",
-    description: "Islomiy moliyaviy mahsulotlar va investitsiya usullari.",
+    week: "2-modul", 
+    title: "Savdo va sherikchilik",
+    description: "Savdo va sherikchilik asoslari.",
     icon: <Target className="w-8 h-8" />,
   },
   {
-    week: "3-hafta",
-    title: "Shaxsiy moliya",
-    description: "Shaxsiy moliyaviy rejalashtirish va boshqarish.",
+    week: "3-modul",
+    title: "Investitsiya asoslari",
+    description: "Investitsiya, aksiyalarga sarmoyalar asoslari",
     icon: <Calculator className="w-8 h-8" />,
   },
   {
-    week: "4-hafta",
-    title: "Amaliy loyihalar",
-    description: "Real loyihalar va case study orqali tajriba.",
+    week: "4-modul",
+    title: "Qarz va moliya",
+    description: "Qarz olish va moliyaviy boshqaruv asoslari.",
     icon: <TrendingUp className="w-8 h-8" />,
   },
 ]

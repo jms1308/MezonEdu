@@ -26,7 +26,7 @@ export default function Header() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl flex h-16 items-center justify-between bg-transparent">
         <div className="flex items-center gap-2">
           <GraduationCapIcon className="h-6 w-6 text-primary" />
-          <span className="text-xl font-bold text-foreground">MezonEdu</span>
+          <span className="text-xl font-bold text-foreground">Mezon Ta'lim</span>
         </div>
         <nav className="hidden md:flex gap-6">
           <button

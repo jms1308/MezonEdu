@@ -83,7 +83,7 @@ export default function IslamicHero() {
                   <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-background/95 backdrop-blur-sm border border-border rounded-full px-4 py-3 shadow-xl">
                     <div className="text-center">
                       <div className="text-foreground text-base font-semibold whitespace-nowrap">Muxtorjon Akramov</div>
-                      <div className="text-primary text-sm">Moliya Mutaxassisi</div>
+                      <div className="text-primary text-sm">Islom moliyasi mutaxassisi</div>
                     </div>
                   </div>
                 </div>
@@ -102,7 +102,7 @@ export default function IslamicHero() {
                     <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-background/95 backdrop-blur-sm border border-border rounded-full px-4 py-3 shadow-xl">
                       <div className="text-center">
                         <div className="text-foreground text-base font-semibold whitespace-nowrap">Muxtorjon Akramov</div>
-                        <div className="text-primary text-sm">Moliya Mutaxassisi</div>
+                        <div className="text-primary text-sm">Islom moliyasi mutaxassisi</div>
                       </div>
                     </div>
                   </div>
@@ -128,20 +128,20 @@ export default function IslamicHero() {
                     <span className="text-foreground leading-7 text-5xl">          {""}   </span>
                   </h1>
                   <p className="text-muted-foreground text-lg sm:text-xl leading-relaxed max-w-xl px-0 text-center">
-                    Moliyaviy savodxonlikni Islomiy qadriyatlar asosida o'rganing — halollik, adolat va ijtimoiy mas'uliyat bilan yo'lingizni boshlang
+                    Moliyaviy savodxonlikni axloqiy qadriyatlar asosida o'rganing — halollik, adolat va ijtimoiy mas'uliyat bilan yo'lingizni boshlang
                   </p>
                 </div>
                 <div className="grid grid-cols-3 gap-6 py-6">
                   <div className="text-center">
                     <div className="text-2xl font-bold text-foreground">12 ta </div>
-                    <div className="text-muted-foreground text-sm">darslar</div>
+                    <div className="text-muted-foreground text-sm">dars</div>
                   </div>
                   <div className="text-center">
                     <div className="text-2xl font-bold text-primary">1.5 oy</div>
                     <div className="text-muted-foreground text-sm">ichida</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-foreground">3 dan ortiq</div>
+                    <div className="text-2xl font-bold text-foreground">2 dan ortiq</div>
                     <div className="text-muted-foreground text-sm">ustozlar</div>
                   </div>
                 </div>
@@ -196,7 +196,7 @@ export default function IslamicHero() {
                       <span className="text-foreground leading-7 text-5xl">          {""}   </span>
                     </h1>
                     <p className="text-muted-foreground text-lg sm:text-xl leading-relaxed max-w-xl px-0 text-center">
-                      Moliyaviy savodxonlikni Islomiy qadriyatlar asosida o'rganing — halollik, adolat va ijtimoiy mas'uliyat bilan yo'lingizni boshlang
+                      Moliyaviy savodxonlikni axloqiy qadriyatlar asosida o'rganing — halollik, adolat va ijtimoiy mas'uliyat bilan yo'lingizni boshlang
                     </p>
                   </div>
                 </ScrollAnimation>
@@ -204,14 +204,14 @@ export default function IslamicHero() {
                   <div className="grid grid-cols-3 gap-6 py-6">
                     <div className="text-center">
                       <div className="text-2xl font-bold text-foreground">12 ta </div>
-                      <div className="text-muted-foreground text-sm">darslar</div>
+                      <div className="text-muted-foreground text-sm">dars</div>
                     </div>
                     <div className="text-center">
                       <div className="text-2xl font-bold text-primary">1.5 oy</div>
                       <div className="text-muted-foreground text-sm">ichida</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-foreground">3 dan ortiq</div>
+                      <div className="text-2xl font-bold text-foreground">2 dan ortiq</div>
                       <div className="text-muted-foreground text-sm">ustozlar</div>
                     </div>
                   </div>
@@ -246,7 +246,7 @@ export default function IslamicHero() {
                       onClick={() => smoothScrollTo("teachers")}
                       className="bg-transparent hover:bg-primary/20 border-2 hover:border-primary transition-all duration-300 font-semibold hover:shadow-lg hover:shadow-primary/25 hover:scale-105 rounded-xl text-foreground border-gray-300 dark:border-white btn-responsive"
                     >
-                      Batafsil Ma'lumot
+                      Batafsil ma'lumot
                     </Button>
                   </div>
                 </ScrollAnimation>
@@ -267,9 +267,9 @@ export default function IslamicHero() {
                 </div>
                 <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-background/95 backdrop-blur-sm border border-border rounded-full px-6 py-4 shadow-xl transition-all duration-300 group-hover:shadow-2xl group-hover:-translate-y-1">
                   <div className="text-center">
-                    <div className="text-foreground text-lg font-semibold whitespace-nowrap">Muzaffar Husniddinov</div>
-                    <div className="text-primary text-sm font-medium">Moliya Sohasida Mutaxassis</div>
-                    <div className="text-muted-foreground text-xs mt-1">10+ yillik tajriba</div>
+                    <div className="text-foreground text-lg font-semibold whitespace-nowrap">Muxtorjon Akramov</div>
+                    <div className="text-primary text-sm font-medium">Islom moliyasi mutaxassisi</div>
+                    <div className="text-muted-foreground text-xs mt-1">5 yillik tajriba</div>
                   </div>
                 </div>
               </div>

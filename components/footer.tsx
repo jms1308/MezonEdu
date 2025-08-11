@@ -18,7 +18,7 @@ export default function Footer() {
               <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
                 <GraduationCapIcon className="h-5 w-5 text-primary-foreground" />
               </div>
-              <span className="text-2xl font-bold text-card-foreground">MezonEdu</span>
+              <span className="text-2xl font-bold text-card-foreground">Mezon Ta'lim</span>
             </div>
           </ScrollAnimation>
 
@@ -32,7 +32,7 @@ export default function Footer() {
                   className="text-card-foreground hover:text-primary transition-colors duration-300 flex items-center gap-2 group"
                 >
                   <span className="text-primary group-hover:scale-110 transition-transform duration-300">📞</span>
-                  +998 12 345 67 89
+                   +998 50 700 77 99
                 </Link>
 
                 <Link
@@ -40,7 +40,7 @@ export default function Footer() {
                   className="text-card-foreground hover:text-primary transition-colors duration-300 flex items-center gap-2 group"
                 >
                   <span className="text-primary group-hover:scale-110 transition-transform duration-300">✉️</span>
-                  info@mezonedu.uz
+                  mezonkengashi@gmail.com
                 </Link>
               </div>
             </ScrollAnimation>
@@ -49,7 +49,7 @@ export default function Footer() {
             <ScrollAnimation animationType="right" delay={600}>
               <div className="flex items-center gap-4">
                 <Link
-                  href="https://instagram.com/mezonedu"
+                  href="https://instagram.com/mezonkengashi"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 rounded-full bg-card border border-border flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-primary/25"
@@ -58,7 +58,7 @@ export default function Footer() {
                 </Link>
 
                 <Link
-                  href="https://t.me/mezonedu"
+                  href="https://t.me/mezonkengashi"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 rounded-full bg-card border border-border flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-primary/25"
@@ -75,7 +75,7 @@ export default function Footer() {
           <div className="mt-8 pt-6 border-t border-border/40">
             <div className="text-center">
               <p className="text-muted-foreground text-sm">
-                © {new Date().getFullYear()} MezonEdu. Barcha huquqlar himoyalangan.
+                © {new Date().getFullYear()} MezonTa'lim. Barcha huquqlar himoyalangan.
               </p>
             </div>
           </div>

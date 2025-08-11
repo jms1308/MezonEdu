@@ -25,7 +25,7 @@ const faqData = [
   {
     question: "Darslar qanday formatda o'tkaziladi?",
     answer:
-      "Darslar jonli efir va yozilgan video formatlarida o'tkaziladi. Shuningdek, amaliy mashg'ulotlar va guruh muhokamalariga ham ega bo'lasiz.",
+      "Darslar oflayn va video formatlarida o'tkaziladi. Shuningdek, amaliy mashg'ulotlar va guruh muhokamalariga ham ega bo'lasiz.",
   },
   {
     question: "Kurs narxi va to'lov usullari qanday?",

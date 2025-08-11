@@ -10,7 +10,7 @@ import 'swiper/css/pagination';
 
 const teachers = [
   {
-    name: 'Muhammad Ayyubxon ustoz',
+    name: 'Muhammad Ayyubxon',
     title: '20 yillik tajriba',
     img: 'https://i.postimg.cc/DfgSnGVZ/Post-to-FB-Muzaffar-1.png',
   },

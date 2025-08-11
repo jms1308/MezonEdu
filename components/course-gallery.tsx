@@ -8,38 +8,38 @@ const courseImages = [
   {
     id: 1,
     src: "https://i.postimg.cc/tJpDBVTY/1.jpg",
-    alt: "Islom moliyasi darsi - 1",
-    title: "Asosiy tushunchalar darsi"
+    alt: "",
+    title: ""
   },
   {
     id: 2,
     src: "https://i.postimg.cc/pdvZWFfk/2.jpg",
-    alt: "Islom moliyasi darsi - 2",
-    title: "Halol investitsiya usullari"
+    alt: "",
+    title: ""
   },
   {
     id: 3,
     src: "https://i.postimg.cc/3r0nZYxX/3.jpg",
-    alt: "Islom moliyasi darsi - 3",
-    title: "Amaliy mashg'ulotlar"
+    alt: "",
+    title: ""
   },
   {
     id: 4,
     src: "https://i.postimg.cc/0N6wq53Z/4.jpg",
-    alt: "Islom moliyasi darsi - 4",
-    title: "Guruh muhokamalari"
+    alt: "",
+    title: ""
   },
   {
     id: 5,
     src: "https://i.postimg.cc/R0jnC5xm/5.jpg",
-    alt: "Islom moliyasi darsi - 5",
-    title: "Case study loyihalari"
+    alt: "",
+    title: ""
   },
   {
     id: 6,
     src: "https://i.postimg.cc/rsT0W1pY/6.jpg",
-    alt: "Islom moliyasi darsi - 6",
-    title: "Sertifikat topshirish"
+    alt: "",
+    title: ""
   }
 ]
 
@@ -151,10 +151,10 @@ export default function CourseGallery() {
         <ScrollAnimation animationType="slideDown">
           <div className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-4 font-poppins">
-              Bizning avvalgi kurslardan lavhalar
+              Kurslarimizdan lavhalar
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              O'quvchilarimizning real dars jarayonlaridan suratlar
+              O'quvchilarimizning real dars jarayonlaridan sur'atlar
             </p>
           </div>
         </ScrollAnimation>
