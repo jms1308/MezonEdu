@@ -20,7 +20,7 @@ const teachers = [
   {
     name: "Muzaffar Husniddinov",
     experience: "12 yil Biznes Sohasida",
-    image: "https://i.postimg.cc/BvPnZWxg/Post-to-FB-Muzaffar.png",
+    image: "https://i.postimg.cc/RV7NWvPw/photo-2022-04-19-20-09-58.jpg",
     description: "Mezon Kengashi asoschisi",
     specialization: "Halol Investitsiya",
     achievements: "200+ biznes loyiha",
