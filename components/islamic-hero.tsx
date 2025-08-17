@@ -211,8 +211,8 @@ export default function IslamicHero() {
                       <div className="text-muted-foreground text-sm">ichida</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-foreground">2 dan ortiq</div>
-                      <div className="text-muted-foreground text-sm">ustozlar</div>
+                      <div className="text-2xl font-bold text-foreground">4 ta</div>
+                      <div className="text-muted-foreground text-sm">modul</div>
                     </div>
                   </div>
                 </ScrollAnimation>
