@@ -13,7 +13,7 @@ const courseImages = [
   },
   {
     id: 2,
-    src: "https://i.postimg.cc/pdvZWFfk/2.jpg",
+    src: "https://i.postimg.cc/CxH4wyhw/1.png",
     alt: "",
     title: ""
   },
@@ -154,7 +154,7 @@ export default function CourseGallery() {
               Kurslarimizdan lavhalar
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              O'quvchilarimizning real dars jarayonlaridan sur'atlar
+              O'quvchilarimizning real dars jarayonlaridan suratlar
             </p>
           </div>
         </ScrollAnimation>
