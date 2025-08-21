@@ -120,9 +120,9 @@ export default function IslamicHero() {
                 </div>
                 <div className="space-y-4 leading-7 text-center">
                   <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-center leading-9">
-                    <span className="text-foreground text-5xl">Islom </span>
+                    <span className="text-foreground text-5xl">Biznesda </span>
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/80 text-5xl">
-                      Moliyasi 1.0
+                      Islom Moliyasi
                     </span>
                     <br />
                     <span className="text-foreground leading-7 text-5xl">          {""}   </span>
@@ -188,9 +188,9 @@ export default function IslamicHero() {
                 <ScrollAnimation animationType="left" delay={300}>
                   <div className="space-y-4 leading-7 text-center">
                     <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-center leading-9">
-                      <span className="text-foreground text-5xl">Islom </span>
-                      <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/80 text-5xl">
-                        Moliyasi 1.0
+                      <span className="text-foreground text-[2.55rem]">Biznesda </span>
+                      <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/80 text-[2.55rem]">
+                        Islom Moliyasi
                       </span>
                       <br />
                       <span className="text-foreground leading-7 text-5xl">          {""}   </span>

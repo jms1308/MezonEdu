@@ -1,12 +1,12 @@
 "use client"
+
 import { Button } from "@/components/ui/button"
-import { GraduationCapIcon } from "lucide-react"
 import SignupModal from "./signup-modal"
 import { ThemeToggle } from "./theme-toggle"
 
 const smoothScrollTo = (elementId: string) => {
   if (typeof window === "undefined") return
-
+ 
   try {
     const element = document.getElementById(elementId)
     if (element) {
@@ -25,8 +25,11 @@ export default function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 backdrop-blur supports-[backdrop-filter]:bg-background/80 bg-background/95">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl flex h-16 items-center justify-between bg-transparent">
         <div className="flex items-center gap-2">
-          <GraduationCapIcon className="h-6 w-6 text-primary" />
-          <span className="text-xl font-bold text-foreground">Mezon Ta'lim</span>
+          <img
+  src="/4.svg"
+  alt="Mezon Ta'lim Logo"
+  className="h-[230px] w-[230px] sm:h-[170px] sm:w-[170px] md:h-[230px] md:w-[230px] object-contain"
+/>
         </div>
         <nav className="hidden md:flex gap-6">
           <button
