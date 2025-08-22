@@ -15,7 +15,7 @@ interface SignupModalProps {
 const courseOptions = [
   { value: "tadbirkor", label: "Tadbirkor" },
   { value: "talaba", label: "Talaba" },
-  { value: "iqtisodchi", label: "Iqtisodchi" },
+  { value: "moliyachi", label: "Moliyachi" },
   { value: "boshqa", label: "Boshqa" },
 ]
 

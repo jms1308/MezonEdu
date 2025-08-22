@@ -58,7 +58,6 @@ export default function Header() {
           </button>
         </nav>
         <div className="flex items-center gap-4">
-          <ThemeToggle />
           <SignupModal>
             <Button className="bg-primary hover:bg-primary/90 text-primary-foreground border border-border hover:border-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/25 rounded-xl">
               Ro'yxatdan o'tish

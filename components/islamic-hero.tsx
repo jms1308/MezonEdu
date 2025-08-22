@@ -174,7 +174,7 @@ export default function IslamicHero() {
                     onClick={() => smoothScrollTo("teachers")}
                     className="bg-transparent hover:bg-primary/20 border-2 hover:border-primary transition-all duration-300 font-semibold hover:shadow-lg hover:shadow-primary/25 hover:scale-105 rounded-xl text-foreground border-gray-300 dark:border-white btn-responsive"
                   >
-                    Batafsil Ma'lumot
+                    Batafsil ma'lumot
                   </Button>
                 </div>
               </>
