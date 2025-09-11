@@ -9,26 +9,26 @@ import ScrollAnimation from "./scroll-animation"
 const learningModules = [
   {
     week: "1-modul",
-    title: "Asosiy bilimlar",
-    description: "Islom moliyasi asoslari va asosiy tushunchalar.",
+    title: "Islom moliyasi asoslari",
+    description: "Nazariy asoslar va shartnomalarning huquqiy poydevori.",
     icon: <BookOpen className="w-8 h-8" />,
   },
   {
     week: "2-modul", 
-    title: "Asosiy moliyaviy instrumentlar",
-    description: "Mushoraka, Mudoraba, Ijara, Salam kabi instrumentlar.",
+    title: "Savdo asosidagi shartnomalar",
+    description: "Savdo va savdo asosidagi shartnomalar.",
     icon: <Target className="w-8 h-8" />,
   },
   {
     week: "3-modul",
-    title: "Islomiy banklar va moliyaviy tizimlar",
-    description: "Islomiy banklarning tuzilishi va ishlash prinsipi.",
+    title: "Sherikchilik shartnomalari",
+    description: "Foyda va zararni taqsimlashga asoslangan moliyaviy instrumentlar.",
     icon: <Calculator className="w-8 h-8" />,
   },
   {
     week: "4-modul",
-    title: "Islom moliyasida zamonaviy masalalar",
-    description: "Islom moliyasi loyihalari tahlili.",
+    title: " Zamonaviy moliyaviy bozorlar va xizmatlar",
+    description: "Islom moliya xizmatlari, ijara, qarz, ribo va kapital bozori instrumentlari.",
     icon: <TrendingUp className="w-8 h-8" />,
   },
 ]

@@ -28,8 +28,8 @@ const pricingPlans = [
     shadowHover: "hover:shadow-blue-400/20",
   },
   {
-    name: "Ilmiy-Amaliy Paket",
-    price: "11,000,000 UZS",
+    name: "Standart Paket",
+    price: "9,000,000 UZS",
     period: "",
     description: "Faoliyatida islomiy moliyani tatbiq etmoqchi bo'lgan ishbilarmonlar va amaliy bilim izlovchilar uchun.",
     features: [
