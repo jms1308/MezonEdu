@@ -8,7 +8,7 @@ import SignupModal from "./signup-modal"
 
 const pricingPlans = [
   {
-    name: "Asosiy Paket",
+    name: "Standart Tarif",
     price: "7,000,000 UZS",
     period: "",
     description: "",
@@ -18,6 +18,7 @@ const pricingPlans = [
       "Kurs materiallari: kitob, bloknot, ruchka",
       "Umumiy Telegram guruh",
       "Sertifikat (kurs tugatganlik bo'yicha)",
+      "Video darslarga 3 oylik kirish imkoniyati",
     ],
     buttonText: "Ro'yxatdan o'tish",
     popular: false,
@@ -28,18 +29,17 @@ const pricingPlans = [
     shadowHover: "hover:shadow-blue-400/20",
   },
   {
-    name: "Premium Paket",
+    name: "Premium tarif",
     price: "9,000,000 UZS",
     period: "",
     description: "",
     features: [
-      "Asosiy Paketdagi barcha imkoniyatlar",
-      "Darslarning yozuvlariga kirish (video)",
-      "Boshqa kurslarga 10% chegirma",
+      "Standard’dagi barcha imkoniyatlar",
+      "Darslarning yozuvlariga 6 oy kirish",
+      "Ustozlarga 6 oy davomida savol berish imkoniyati (mentorlar orqali)",
+      "Mezon Kengashi tomonidan 2 soatlik konsultatsiya",
       "Individual mentorlik",
-      "3 marta jonli savol-javob sessiyasi",
-      "Elektron testlar va mustahkamlovchi materiallar",
-      "Premium qatnashchilar uchun yopiq guruh",
+      "Premium qatnashchilarga maxsus yopiq guruh",
     ],
     buttonText: "Ro'yxatdan o'tish",
     popular: true,
