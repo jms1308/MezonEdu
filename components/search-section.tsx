@@ -43,9 +43,7 @@ export default function SearchSection() {
               <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-6 font-poppins">
                 Bizning mutaxassis ustozlarimiz
               </h2>
-              <p className="text-muted-foreground text-lg max-w-3xl mx-auto leading-relaxed">
-                Qo'shimcha darslarda qatnashadigan ustozlar
-              </p>
+          
             </div>
           </ScrollAnimation>
 
