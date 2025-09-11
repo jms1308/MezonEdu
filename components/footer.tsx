@@ -58,7 +58,7 @@ export default function Footer() {
                 </Link>
 
                 <Link
-                  href="https://t.me/mezonkengashi"
+                  href="https://t.me/mezontalim"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 rounded-full bg-card border border-border flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-primary/25"

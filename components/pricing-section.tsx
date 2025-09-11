@@ -34,8 +34,8 @@ const pricingPlans = [
     period: "",
     description: "",
     features: [
-      "Standard’dagi barcha imkoniyatlar",
-      "Darslarning yozuvlariga 6 oy kirish",
+      "Standart tarifdagi barcha imkoniyatlar",
+      "Darslarning yozuvlariga 6 oy kirish imkoniyati",
       "Ustozlarga 6 oy davomida savol berish imkoniyati (mentorlar orqali)",
       "Mezon Kengashi tomonidan 2 soatlik konsultatsiya",
       "Individual mentorlik",
