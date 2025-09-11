@@ -11,7 +11,7 @@ const pricingPlans = [
     name: "Asosiy Paket",
     price: "7,000,000 UZS",
     period: "",
-    description: "Islomiy moliya haqida chuqur bilim olishni xohlovchi talabalar va yangi boshlovchilar uchun.",
+    description: "",
     features: [
       "12 ta dars (offline)",
       "Coffee break + networking",
@@ -28,10 +28,10 @@ const pricingPlans = [
     shadowHover: "hover:shadow-blue-400/20",
   },
   {
-    name: "Standart Paket",
+    name: "Premium Paket",
     price: "9,000,000 UZS",
     period: "",
-    description: "Faoliyatida islomiy moliyani tatbiq etmoqchi bo'lgan ishbilarmonlar va amaliy bilim izlovchilar uchun.",
+    description: "",
     features: [
       "Asosiy Paketdagi barcha imkoniyatlar",
       "Darslarning yozuvlariga kirish (video)",
@@ -89,8 +89,8 @@ export default function PricingSection() {
                 }`}
               >
                 {plan.popular && (
-                  <div className="absolute top-0 right-0 bg-primary text-primary-foreground px-6 py-2 text-sm font-medium rounded-bl-2xl rounded-tr-[20px] shadow-md">
-                    Eng Mashhur
+                  <div className="absolute top-0 right-0 bg-primary text-primary-foreground px-4 py-2 text-sm font-medium rounded-bl-2xl rounded-tr-[20px] shadow-md">
+                    Maxsus taklif
                   </div>
                 )}
 
@@ -119,17 +119,7 @@ export default function PricingSection() {
                   </ul>
                 </CardContent>
 
-                <CardFooter className="pt-4 pb-6 px-6 flex-shrink-0">
-                  <SignupModal>
-                    <Button className={`w-full py-4 text-base font-semibold transition-all duration-300 rounded-xl h-auto ${
-                      plan.popular 
-                        ? "bg-primary hover:bg-primary/90 text-primary-foreground border-primary/20 hover:border-primary hover:shadow-primary/25" 
-                        : "bg-card hover:bg-primary/10 text-foreground border border-border hover:border-primary/50 hover:text-primary"
-                    } hover:shadow-lg`}>
-                      {plan.buttonText}
-                    </Button>
-                  </SignupModal>
-                </CardFooter>
+               
               </Card>
             </ScrollAnimation>
           ))}

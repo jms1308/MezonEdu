@@ -47,10 +47,10 @@ export default function FAQSection() {
         {/* Section Header */}
         <ScrollAnimation animationType="flipIn">
           <div className="text-center mb-16 relative">
-            <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">Tez-tez So'raladigan Savollar</h2>
+            <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">Eng ko'p so'raladigan savollar</h2>
             <div className="w-24 h-1 bg-gradient-to-r from-primary to-primary/80 mx-auto mb-6"></div>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Kurs haqida eng ko'p so'raladigan savollarga javoblar
+              
             </p>
           </div>
         </ScrollAnimation>
