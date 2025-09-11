@@ -8,7 +8,7 @@ import SignupModal from "./signup-modal"
 
 const pricingPlans = [
   {
-    name: "Standart Tarif",
+    name: "Standart tarif",
     price: "7,000,000 UZS",
     period: "",
     description: "",
