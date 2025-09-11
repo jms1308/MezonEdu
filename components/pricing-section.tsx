@@ -18,7 +18,7 @@ const pricingPlans = [
       "Kurs materiallari: kitob, bloknot, ruchka",
       "Umumiy Telegram guruh",
       "Sertifikat (kurs tugatganlik bo'yicha)",
-      "Video darslarga 3 oylik kirish imkoniyati",
+      "Dars yozuvlariga 3 oylik kirish imkoniyati",
     ],
     buttonText: "Ro'yxatdan o'tish",
     popular: false,
