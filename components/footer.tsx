@@ -32,7 +32,7 @@ export default function Footer() {
                   className="text-card-foreground hover:text-primary transition-colors duration-300 flex items-center gap-2 group"
                 >
                   <span className="text-primary group-hover:scale-110 transition-transform duration-300">📞</span>
-                   +998 50 700 77 99
+                   +998 90 109 77 99
                 </Link>
 
                 <Link
@@ -40,7 +40,7 @@ export default function Footer() {
                   className="text-card-foreground hover:text-primary transition-colors duration-300 flex items-center gap-2 group"
                 >
                   <span className="text-primary group-hover:scale-110 transition-transform duration-300">✉️</span>
-                  mezonkengashi@gmail.com
+                  mezontalim@gmail.com
                 </Link>
               </div>
             </ScrollAnimation>
