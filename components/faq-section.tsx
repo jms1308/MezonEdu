@@ -10,27 +10,27 @@ const faqData = [
   {
     question: "Kurs davomiyligi qancha?",
     answer:
-      "Bizning kurslarimiz odatda 1.5-2 oy davom etadi. Bu vaqt ichida siz Islom moliyasi asoslarini to'liq o'rganasiz va amaliy ko'nikmalarni egallaysiz.",
+      " Kurslarimiz odatda 1.5-2 oy davom etadi. Bu vaqt ichida siz Islom moliyasi asoslarini 12 ta darsda o‘rganib olasiz.",
   },
   {
-    question: "Oldindan tajriba kerakmi?",
+    question: "Oldindan qanday bilimlar kerak?",
     answer:
-      "Yo'q, hech qanday oldindan tajriba talab qilinmaydi. Biz eng asosiy tushunchalardan boshlaymiz va bosqichma-bosqich o'rgatamiz.",
+      " “Biznesda Islom moliyasi” kursi tadbirkorlarga mo‘ljallangan bo’lib, oldindan Islom moliyasiga oid hech qanday bilim talab qilinmaydi. Kurs davomida eng asosiy tushunchalarni bosqichma-bosqich o’rgatamiz",
   },
   {
-    question: "Kurs tugagandan keyin sertifikat berilarmı?",
+    question: "Kurs tugaganidan keyin sertifikat beriladimi?",
     answer:
       "Ha, kursni muvaffaqiyatli tugatgan barcha talabalar rasmiy sertifikat olishadi. Bu sertifikat sizning bilim va ko'nikmalaringizni tasdiqlaydi.",
   },
   {
     question: "Darslar qanday formatda o'tkaziladi?",
     answer:
-      "Darslar oflayn va video formatlarida o'tkaziladi. Shuningdek, amaliy mashg'ulotlar va guruh muhokamalariga ham ega bo'lasiz.",
+      "Barcha darslar oflayn formatda o‘tkaziladi. Kurs o‘tkaziladigan manzil va dars vaqtlarini sizga ro‘yxatdan o‘tganingizdan keyin ham alohida jo‘natib qo‘yamiz. Har dars videoga yozib olinadi va ularning video yozuvlariga kirish imkoni bir necha oy davomida beriladi.",
   },
   {
     question: "Kurs narxi va to'lov usullari qanday?",
     answer:
-      "Kurs narxi rejaga qarab farq qiladi. Biz naqd, plastik karta va bo'lib to'lash imkoniyatlarini taklif qilamiz. Batafsil ma'lumot uchun biz bilan bog'laning.",
+      "Kurs narxi tanlagan tarifingizga ko‘ra bo‘ladi. To‘lovni plastik karta orqali va bo‘lib to‘lashingiz mumkin. Maxsus takliflar va  atafsil ma‘lumot uchun biz bilan bog’laning.",
   },
 ]
 
@@ -94,14 +94,14 @@ export default function FAQSection() {
         <ScrollAnimation animationType="zoomIn" delay={600}>
           <div className="text-center">
             <div className="bg-card rounded-lg p-8 shadow-lg border border-border">
-              <h3 className="text-xl font-semibold text-card-foreground mb-3">Hali ham savollaringiz bormi?</h3>
+              <h3 className="text-xl font-semibold text-card-foreground mb-3"> Boshqa savollaringiz bormi?</h3>
               <p className="text-muted-foreground mb-6">Bizning mutaxassislarimiz sizga yordam berishga tayyor</p>
               <SignupModal>
                 <Button
                   size="lg"
                   className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 font-semibold transition-all duration-300 hover:shadow-lg hover:scale-105 border border-border hover:border-primary hover:shadow-primary/25 rounded-xl"
                 >
-                  Biz Bilan Bog'laning
+                  Biz bilan bog'laning
                 </Button>
               </SignupModal>
             </div>

@@ -151,7 +151,7 @@ export default function CourseGallery() {
         <ScrollAnimation animationType="slideDown">
           <div className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-4 font-poppins">
-              O'quv dasturlarimizdan loyihalar
+              O'quv dasturlarimizdan lavhalar
             </h2>
          
           </div>

@@ -41,7 +41,7 @@ export default function SearchSection() {
           <ScrollAnimation animationType="slideDown">
             <div className="text-center mb-20">
               <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-6 font-poppins">
-                Bizning mutaxassis ustozlarimiz
+                Mutaxassis ustozlarimiz
               </h2>
           
             </div>

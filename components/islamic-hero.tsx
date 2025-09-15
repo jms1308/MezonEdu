@@ -73,12 +73,11 @@ const HeroContent = ({ animated }: { animated: boolean }) => {
       <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-center">
         <span className="text-foreground">Biznesda </span>
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/80">
-          Islom Moliyasi
+          Islom moliyasi
         </span>
       </h1>
       <p className="text-muted-foreground text-lg sm:text-xl leading-relaxed max-w-xl mx-auto">
-        Moliyaviy savodxonlikni axloqiy qadriyatlar asosida o'rganing —
-        halollik, adolat va ijtimoiy mas'uliyat bilan yo'lingizni boshlang
+       Qadriyatlarga asoslangan tadbirkorlik faoliyatingizni yo‘lga qo‘ying va biznesingizni Islom moliyasi tamoyillariga muvofiq rivojlantiring
       </p>
     </div>
   )
@@ -130,7 +129,7 @@ const HeroContent = ({ animated }: { animated: boolean }) => {
         onClick={() => smoothScrollTo("teachers")}
         className="bg-transparent hover:bg-primary/20 border-2 hover:border-primary transition-all duration-300 font-semibold hover:shadow-lg hover:shadow-primary/25 hover:scale-105 rounded-xl text-foreground border-gray-300 dark:border-white btn-responsive"
       >
-        Batafsil Ma'lumot
+        Batafsil ma'lumot
       </Button>
     </div>
   )
