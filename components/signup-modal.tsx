@@ -166,7 +166,7 @@ export default function SignupModal({ children, className }: SignupModalProps) {
                   </label>
                   <Select value={formData.course} onValueChange={(value) => handleInputChange("course", value)}>
                     <SelectTrigger className={`h-11 sm:h-10 bg-background border-border text-foreground placeholder:text-muted-foreground focus:border-primary focus:ring-primary/20 rounded-xl transition-all duration-200 text-sm ${courseError ? 'border-red-500' : ''}`}>
-                      <SelectValue placeholder="Kurs darajasini tanlang" />
+                      <SelectValue placeholder="Sohalar" />
                     </SelectTrigger>
                     <SelectContent className="bg-card border-border rounded-xl">
                       {courseOptions.map((option) => (
