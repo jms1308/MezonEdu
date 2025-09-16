@@ -18,9 +18,9 @@ const faqData = [
       " “Biznesda Islom moliyasi” kursi tadbirkorlarga mo‘ljallangan bo’lib, oldindan Islom moliyasiga oid hech qanday bilim talab qilinmaydi. Kurs davomida eng asosiy tushunchalarni bosqichma-bosqich o’rgatamiz",
   },
   {
-    question: "Kurs tugaganidan keyin sertifikat beriladimi?",
+    question: "Qanday chegirmalar bor?",
     answer:
-      "Ha, kursni muvaffaqiyatli tugatgan barcha talabalar rasmiy sertifikat olishadi. Bu sertifikat sizning bilim va ko'nikmalaringizni tasdiqlaydi.",
+      "Ha, maxsus chegirmalar, xususan, kursga 3, 5 yo 10 talik guruhlar shaklida kasbdoshlari yo tanishlari bilan birga qatnashmoqchi bo'lganlar uchun alohida takliflarimiz mavjud. Batafsil ma'lumotlar va sizga to'g'ri keladigan takliflar uchun biz bilan bog'laning.",
   },
   {
     question: "Darslar qanday formatda o'tkaziladi?",
