@@ -15,7 +15,7 @@ const learningModules = [
   },
   {
     week: "2-modul", 
-    title: "Tijoriy shartnomalar",
+    title: "Savdo shartnomalari",
     description: "Oldi-sotdi va ijara asosidagi shartnomlar.",
     icon: <Target className="w-8 h-8" />,
   },

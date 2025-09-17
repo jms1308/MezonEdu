@@ -12,7 +12,7 @@ const poppins = Poppins({
 })
 
 export const metadata = {
-  title: "MezonEdu - Islom Moliyasi Kurslari",
+  title: "Mezon Ta'lim - Islom Moliyasi Kurslari",
   description: "Zamonaviy dunyoda Islom moliya tamoyillarini o'rganish va amalda qo'llash",
 }
 
