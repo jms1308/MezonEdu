@@ -30,7 +30,7 @@ const faqData = [
   {
     question: "Kurs narxi va to'lov usullari qanday?",
     answer:
-      "Kurs narxi tanlagan tarifingizga ko‘ra bo‘ladi. To‘lovni plastik karta orqali va bo‘lib to‘lashingiz mumkin. Maxsus takliflar va  atafsil ma‘lumot uchun biz bilan bog’laning.",
+      "Kurs narxi tanlagan tarifingizga ko‘ra bo‘ladi. To‘lovni plastik karta orqali va bo‘lib to‘lashingiz mumkin. Maxsus takliflar va batafsil ma‘lumot uchun biz bilan bog’laning.",
   },
 ]
 
